@@ -141,8 +141,111 @@ zstd                      1.5.6                ha6fb4c9_0    conda-forge
 ## TODO
 
 Read `man` page for FastQC 
+
+Produce plots of:
+- per-base quality score distributions for R1 and R2 reads
+- per-base N content
+
+Comment on whether or not they are consistent with the quality score plots.
+
+Run quality score plotting script from Demultiplexing assignment in Bi622. (make sure this is using a running sum strategy). 
+Describe how these plots differ from FastQC.
+
+If different, propose an explanation. 
+Does the runtime differ? Mem/CPU usage? If so, why?
+
+Comment on overall quality. make a recommendation on whether this data is suited to use for further analysis. 
+
+# Part 2
+
 Install:
 - `cutadapt` Version 4.9
 - `trimmomatic` Version 0.39
 
+Read `man` page for `cutadapt`. 
 
+Using `cutadapt` trim adapter sequences from these files. Use default settings. WHat proportion of reads (both R1 and R2) were trimmed?
+
+Use unix commands to search for the adapter sequences in the data sets and confirm the expected sequence orientations. Report commands used for this and the reasoning behind them and how the adapter sequences are confirmed. 
+
+Use `trimmomatic` to quality trim reads. Specify the fillowing, **in this order**:
+- LEADING: quality of 3
+- TRAILING: quality of 3
+- SLIDING WINDOW: window size of 5 and required quality of 15
+- MINLENGTH: 35 bases
+
+Output compressed files to this directory 
+`/projects/bgmp/wesg/bioinfo/Bi623/QAA`
+and clear out intermediate files. 
+
+Plot the trimmed read length distributions for both the R1 and R2 reads on the same plot (see ICA4).
+Produce 2 different plots for the 2 different RNA samples.
+
+Comment on whether you ecpect R1a dn R2s to be adapter-trimmed at different rates and why.
+
+Run `FastQC` on trimmed data. Comment on differences between the trimmed and untrimmed data. Include any figures needed to support your conclusions.
+
+
+# Part 3
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+10. Install sofware (record details in lab notebook!!!). In your QAA environment, use conda to install:
+    - star
+    - numpy
+    - matplotlib
+    - htseq
+
+11. Find publicly available mouse genome fasta files (Ensemble release 112) and generate an alignment database from them. Align the reads to your mouse genomic database using a splice-aware aligner. Use the settings specified in PS8 from Bi621.
+
+  > [!IMPORTANT]
+  > You will need to use gene models to perform splice-aware alignment, see PS8 from Bi621.
+    
+12. Using your script from PS8 in Bi621, report the number of mapped and unmapped reads from each of your 2 sam files. Make sure that your script is looking at the bitwise flag to determine if reads are primary or secondary mapping (update/fix your script if necessary).
+
+13. Count reads that map to features using `htseq-count`. You should run htseq-count twice: once with `--stranded=yes` and again with `--stranded=reverse`. Use default parameters otherwise.
+
+14. Demonstrate convincingly whether or not the data are from "strand-specific" RNA-Seq libraries. Include any comands/scripts used. Briefly describe your evidence, using quantitative statements (e.g. "I propose that these data are/are not strand-specific, because X% of the reads are y, as opposed to z.").
+
+  > [!TIP]
+  > Recall ICA4 from Bi621.
+
+# Challenge (optional!)
+
+Review the [metadata](./metadata) available to you and see if this information leads to any additional insight of your analysis.
+
+# To turn in your work for this assignment
+
+## Upload your:
+- [ ] lab notebook,
+- [ ] Talapas batch script/code, 
+- [ ] FastQC plots, 
+- [ ] counts files generated from htseq-count (in a folder would be nice),
+- [ ] pdf report (see below), 
+- [ ] and any additional plots, code, or code output
+
+to GitHub.
+    
+## You should create a pdf file (using Rmarkdown) with a high-level report including:
+- [ ] all requested plots
+- [ ] answers to questions
+- [ ] mapped/unmapped read counts from PS8 script (in a nicely formatted table)
+    
+The three parts of the assignment should be clearly labeled. Be sure to title and write a descriptive figure caption for each image/graph/table you present. 
+> [!TIP]
+> Think about figure captions you've read and discussed in Journal Club. Find some good examples to model your captions on.
+
+The file should be named `QAA_report.pdf`, and it should be a the top level of your repo AND submitted to Canvas.
