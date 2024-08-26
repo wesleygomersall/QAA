@@ -40,8 +40,6 @@ The demultiplexed, gzipped `.fastq` files are here: ```/projects/bgmp/shared/201
 Do not move, copy, or unzip this data!
 
 # Part 1
- 
-
 
 ## 2024-08-25
 
@@ -185,51 +183,28 @@ Comment on whether you ecpect R1a dn R2s to be adapter-trimmed at different rate
 
 Run `FastQC` on trimmed data. Comment on differences between the trimmed and untrimmed data. Include any figures needed to support your conclusions.
 
-
 # Part 3
 
+In QAA environment install: 
+- `star`
+- `numpy`
+- `matplotlib`
+- `htseq`
 
+Download mouse genome fasta files from Ensemble release 112. Generate an alignment database from them. Align the rease to the mouse genomic databse using a splice-aware aligner. Use the settings specified in PS9 from Bi 621. 
 
+See gene models from PS8. Necessary to perform splice-aware alignment. 
 
+Using script from PS8, report number of mapped and unmapped reads from each of the 2 sam files generated at this point.
+Ensure the script is looking at the bitwise flag to determine primary or secondary mapping (update or fix it if necessary) 
 
+Use `htseq-count` to count reads that map to features. Run this twice. Once with `--stranded=yes` and again with `--stranded=reverse`. Use default parameters otherwise.
 
-
-
-
-
-
-
-
-
-
-
-10. Install sofware (record details in lab notebook!!!). In your QAA environment, use conda to install:
-    - star
-    - numpy
-    - matplotlib
-    - htseq
-
-11. Find publicly available mouse genome fasta files (Ensemble release 112) and generate an alignment database from them. Align the reads to your mouse genomic database using a splice-aware aligner. Use the settings specified in PS8 from Bi621.
-
-  > [!IMPORTANT]
-  > You will need to use gene models to perform splice-aware alignment, see PS8 from Bi621.
-    
-12. Using your script from PS8 in Bi621, report the number of mapped and unmapped reads from each of your 2 sam files. Make sure that your script is looking at the bitwise flag to determine if reads are primary or secondary mapping (update/fix your script if necessary).
-
-13. Count reads that map to features using `htseq-count`. You should run htseq-count twice: once with `--stranded=yes` and again with `--stranded=reverse`. Use default parameters otherwise.
-
-14. Demonstrate convincingly whether or not the data are from "strand-specific" RNA-Seq libraries. Include any comands/scripts used. Briefly describe your evidence, using quantitative statements (e.g. "I propose that these data are/are not strand-specific, because X% of the reads are y, as opposed to z.").
-
-  > [!TIP]
-  > Recall ICA4 from Bi621.
-
-# Challenge (optional!)
+Determin and support whether or not the data are from strand-specific RNA-Seq libraries. Include commands and scripts used. Briefly describe evidence with quantitative statements (e.g. "I propose that these data are/are not strand-specific, because X% of the reads are y, as opposed to z."). Remember ICA4.
 
 Review the [metadata](./metadata) available to you and see if this information leads to any additional insight of your analysis.
 
-# To turn in your work for this assignment
-
-## Upload your:
+## Upload:
 - [ ] lab notebook,
 - [ ] Talapas batch script/code, 
 - [ ] FastQC plots, 
@@ -239,13 +214,11 @@ Review the [metadata](./metadata) available to you and see if this information l
 
 to GitHub.
     
-## You should create a pdf file (using Rmarkdown) with a high-level report including:
+## Create a pdf file (using Rmarkdown) including:
 - [ ] all requested plots
 - [ ] answers to questions
 - [ ] mapped/unmapped read counts from PS8 script (in a nicely formatted table)
     
 The three parts of the assignment should be clearly labeled. Be sure to title and write a descriptive figure caption for each image/graph/table you present. 
-> [!TIP]
-> Think about figure captions you've read and discussed in Journal Club. Find some good examples to model your captions on.
 
 The file should be named `QAA_report.pdf`, and it should be a the top level of your repo AND submitted to Canvas.
