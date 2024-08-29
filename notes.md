@@ -136,9 +136,27 @@ zstd                      1.5.6                ha6fb4c9_0    conda-forge
 
 </details>
 
+## 2024-08-28
+
+Read `fastqc --help > fastqhelp.txt`
+
+In an interactive session: 
+
+```
+mkdir /projects/bgmp/wesg/bioinfo/Bi623/QAA/fqcout_raw
+cd /projects/bgmp/shared/2017_sequencing/demultiplexed
+conda activate QAA
+fastqc -o /projects/bgmp/wesg/bioinfo/Bi623/QAA/fqcout_raw --noextract -f fastq 27_4C_mbnl_S19_L008_R1_001.fastq.gz 27_4C_mbnl_S19_L008_R2_001.fastq.gz 32_4G_both_S23_L008_R1_001.fastq.gz 32_4G_both_S23_L008_R2_001.fastq.gz
+```
+
+I grab this folder to my personal computer with `scp`
+
+
+
+
 ## TODO
 
-Read `man` page for FastQC 
+
 
 Produce plots of:
 - per-base quality score distributions for R1 and R2 reads
