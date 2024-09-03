@@ -149,7 +149,38 @@ conda activate QAA
 fastqc -o /projects/bgmp/wesg/bioinfo/Bi623/QAA/fqcout_raw --noextract -f fastq 27_4C_mbnl_S19_L008_R1_001.fastq.gz 27_4C_mbnl_S19_L008_R2_001.fastq.gz 32_4G_both_S23_L008_R1_001.fastq.gz 32_4G_both_S23_L008_R2_001.fastq.gz
 ```
 
-I grab this folder to my personal computer with `scp`
+## 2024-09-02
+
+Unzip these fastqc outputs and move them to folder for reporting. 
+
+```
+cd fqcout_raw
+unzip 27_4C_mbnl_S19_L008_R1_001_fastqc.zip
+unzip 27_4C_mbnl_S19_L008_R2_001_fastqc.zip
+unzip 32_4G_both_S23_L008_R1_001_fastqc.zip
+unzip 32_4G_both_S23_L008_R2_001_fastqc.zip
+mkdir report
+cp 27_4C_mbnl_S19_L008_R1_001_fastqc/Images/per_base_quality.png report/27_R1_per_base_quality.png
+cp 27_4C_mbnl_S19_L008_R2_001_fastqc/Images/per_base_quality.png report/27_R2_per_base_quality.png
+cp 32_4G_both_S23_L008_R1_001_fastqc/Images/per_base_quality.png report/32_R1_per_base_quality.png
+cp 32_4G_both_S23_L008_R2_001_fastqc/Images/per_base_quality.png report/32_R2_per_base_quality.png
+cp 27_4C_mbnl_S19_L008_R1_001_fastqc/Images/per_base_n_content.png report/27_R1_per_base_n_content.png
+cp 27_4C_mbnl_S19_L008_R2_001_fastqc/Images/per_base_n_content.png report/27_R2_per_base_n_content.png
+cp 32_4G_both_S23_L008_R1_001_fastqc/Images/per_base_n_content.png report/32_R1_per_base_n_content.png
+cp 32_4G_both_S23_L008_R2_001_fastqc/Images/per_base_n_content.png report/32_R2_per_base_n_content.png
+# Remove these unzipped data  
+rm -r 27_4C_mbnl_S19_L008_R1_001_fastqc
+rm -r 27_4C_mbnl_S19_L008_R2_001_fastqc
+rm -r 32_4G_both_S23_L008_R1_001_fastqc
+rm -r 32_4G_both_S23_L008_R2_001_fastqc
+cd ..
+```
+
+The read 1 files' quality is much better than the read 2s' quality score but that is due to the reads being later in the sequencing run.  
+
+### FastQC outputs from raw files
+### 27_4C_mbnl_S19_L008_R1
+![per base n content](./fqcout_raw/report/27_R1_per_base_n_content.png)
 
 
 
