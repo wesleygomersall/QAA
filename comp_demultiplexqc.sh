@@ -23,16 +23,16 @@ conda list
 
 conda deactivate
 
-conda activate bgmp_py312
+conda activate bgmp_py.mplib
 conda list
  
-/usr/bin/time -v ./mean_qual.py -i 27_4C_mbnl_S19_L008_R1_001.fastq.gz -o /projects/bgmp/wesg/bioinfo/Bi623/QAA/fqcout_raw/27_R1_myplot.png
+/usr/bin/time -v /projects/bgmp/wesg/bioinfo/Bi623/QAA/mean_qual.py -i 27_4C_mbnl_S19_L008_R1_001.fastq.gz -o /projects/bgmp/wesg/bioinfo/Bi623/QAA/fqcout_raw/report/27_R1_myplot.png
 
-/usr/bin/time -v ./mean_qual.py -i 27_4C_mbnl_S19_L008_R2_001.fastq.gz -o /projects/bgmp/wesg/bioinfo/Bi623/QAA/fqcout_raw/27_R2_myplot.png
+/usr/bin/time -v /projects/bgmp/wesg/bioinfo/Bi623/QAA/mean_qual.py -i 27_4C_mbnl_S19_L008_R2_001.fastq.gz -o /projects/bgmp/wesg/bioinfo/Bi623/QAA/fqcout_raw/report/27_R2_myplot.png
 
-/usr/bin/time -v ./mean_qual.py -i 32_4G_both_S23_L008_R1_001.fastq.gz -o /projects/bgmp/wesg/bioinfo/Bi623/QAA/fqcout_raw/32_R1_myplot.png
+/usr/bin/time -v /projects/bgmp/wesg/bioinfo/Bi623/QAA/mean_qual.py -i 32_4G_both_S23_L008_R1_001.fastq.gz -o /projects/bgmp/wesg/bioinfo/Bi623/QAA/fqcout_raw/report/32_R1_myplot.png
 
-/usr/bin/time -v ./mean_qual.py -i 32_4G_both_S23_L008_R2_001.fastq.gz -o /projects/bgmp/wesg/bioinfo/Bi623/QAA/fqcout_raw/32_R2_myplot.png
+/usr/bin/time -v /projects/bgmp/wesg/bioinfo/Bi623/QAA/mean_qual.py -i 32_4G_both_S23_L008_R2_001.fastq.gz -o /projects/bgmp/wesg/bioinfo/Bi623/QAA/fqcout_raw/report/32_R2_myplot.png
 
 conda deactivate
 
