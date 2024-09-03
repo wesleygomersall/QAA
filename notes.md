@@ -197,7 +197,7 @@ The read 1 files' quality is much better than the read 2s' quality score but tha
 
 ## TODO
 
-Script [something](./file.py) from demultiplex assignment. 
+Script [mean_qual.py](./mean_qual.py) from demultiplex assignment. I had to edit it slightly, it only produces plot for a single file at a time, which it now takes in with argparse. I renamed it slightly from `mean_qual_fq.py` as it was in the demultiplex assignment. 
 
 I need to re-run the fastqc of the data in a slurm script using `/usr/bin/time -v ` commands so that I compare to the python script that I made. 
 

@@ -8,6 +8,8 @@
 #SBATCH --mail-user=wesg@uoregon.edu
 #SBATCH --mail-type=END
 
+cd /projects/bgmp/shared/2017_sequencing/demultiplexed
+
 conda activate QAA
 conda list 
 
@@ -19,10 +21,19 @@ conda list
 
 /usr/bin/time -v fastqc -o /projects/bgmp/wesg/bioinfo/Bi623/QAA/fqcout_raw --noextract -f fastq 32_4G_both_S23_L008_R2_001.fastq.gz 
 
-## WIP: 
+conda deactivate
 
-# now create the plots from demultiplex (copy that python script over to this dir) 
+conda activate bgmp_py312
+conda list
+ 
+/usr/bin/time -v ./mean_qual.py -i 27_4C_mbnl_S19_L008_R1_001.fastq.gz -o /projects/bgmp/wesg/bioinfo/Bi623/QAA/fqcout_raw/27_R1_myplot.png
 
-# run that scipt on each of these files. 
+/usr/bin/time -v ./mean_qual.py -i 27_4C_mbnl_S19_L008_R2_001.fastq.gz -o /projects/bgmp/wesg/bioinfo/Bi623/QAA/fqcout_raw/27_R2_myplot.png
 
-# use `/usr/bin/time -v` command to compare the performance of this algorithm compared to fastqc. 
+/usr/bin/time -v ./mean_qual.py -i 32_4G_both_S23_L008_R1_001.fastq.gz -o /projects/bgmp/wesg/bioinfo/Bi623/QAA/fqcout_raw/32_R1_myplot.png
+
+/usr/bin/time -v ./mean_qual.py -i 32_4G_both_S23_L008_R2_001.fastq.gz -o /projects/bgmp/wesg/bioinfo/Bi623/QAA/fqcout_raw/32_R2_myplot.png
+
+conda deactivate
+
+cd /projects/bgmp/wesg/bioinfo/Bi623/QAA
