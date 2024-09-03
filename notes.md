@@ -180,69 +180,39 @@ The read 1 files' quality is much better than the read 2s' quality score but tha
 
 ### FastQC outputs from raw files
 ### 27_4C_mbnl_S19_L008_R1
-![](./fqcout_raw/report/27_R1_per_base_n_content.png)
 ![](./fqcout_raw/report/27_R1_per_base_quality.png)
+![](./fqcout_raw/report/27_R1_per_base_n_content.png)
 
 ### 27_4C_mbnl_S19_L008_R2
-![](./fqcout_raw/report/27_R2_per_base_n_content.png)
 ![](./fqcout_raw/report/27_R2_per_base_quality.png)
+![](./fqcout_raw/report/27_R2_per_base_n_content.png)
 
 ### 32_4G_both_S23_L008_R1
-![](./fqcout_raw/report/32_R1_per_base_n_content.png)
 ![](./fqcout_raw/report/32_R1_per_base_quality.png)
+![](./fqcout_raw/report/32_R1_per_base_n_content.png)
 
 ### 32_4G_both_S23_L008_R2
-![](./fqcout_raw/report/32_R2_per_base_n_content.png)
 ![](./fqcout_raw/report/32_R2_per_base_quality.png)
+![](./fqcout_raw/report/32_R2_per_base_n_content.png)
 
 ## TODO
 
+Script [something](./file.py) from demultiplex assignment. 
 
+I need to re-run the fastqc of the data in a slurm script using `/usr/bin/time -v ` commands so that I compare to the python script that I made. 
 
-Produce plots of:
-- per-base quality score distributions for R1 and R2 reads
-- per-base N content
-
-Comment on whether or not they are consistent with the quality score plots.
+[comp_demultplexqc.sh](./comp_demultiplexqc.sh)
 
 Run quality score plotting script from Demultiplexing assignment in Bi622. (make sure this is using a running sum strategy). 
 Describe how these plots differ from FastQC.
 
+Comment on whether or not they are consistent with the quality score plots.
 If different, propose an explanation. 
 Does the runtime differ? Mem/CPU usage? If so, why?
 
 Comment on overall quality. make a recommendation on whether this data is suited to use for further analysis. 
 
-# Part 2
 
-Install:
-- `cutadapt` Version 4.9
-- `trimmomatic` Version 0.39
-
-Read `man` page for `cutadapt`. 
-
-Using `cutadapt` trim adapter sequences from these files. Use default settings. WHat proportion of reads (both R1 and R2) were trimmed?
-
-Use unix commands to search for the adapter sequences in the data sets and confirm the expected sequence orientations. Report commands used for this and the reasoning behind them and how the adapter sequences are confirmed. 
-
-
-## TODO
-
-
-
-Produce plots of:
-- per-base quality score distributions for R1 and R2 reads
-- per-base N content
-
-Comment on whether or not they are consistent with the quality score plots.
-
-Run quality score plotting script from Demultiplexing assignment in Bi622. (make sure this is using a running sum strategy). 
-Describe how these plots differ from FastQC.
-
-If different, propose an explanation. 
-Does the runtime differ? Mem/CPU usage? If so, why?
-
-Comment on overall quality. make a recommendation on whether this data is suited to use for further analysis. 
 
 # Part 2
 
