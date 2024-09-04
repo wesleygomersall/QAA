@@ -182,12 +182,9 @@ I need to re-run the fastqc of the data in a slurm script using `/usr/bin/time -
 
 [comp_demultplexqc.sh](./comp_demultiplexqc.sh)
 
-
 The plots I generated are basically the same in terms of what information they displey, however the FastQc plots include error bars, which might be variance or interquartile range. 
 
-See [slurm-15932418.out](./slurm-15932418.out)
-
-COMMENT ON TIME COMMANDS HERE
+See [slurm-15932418.out](./slurm-15932418.out) for time of each of these commands. 
 
 The read 1 files' quality is much better than the read 2s' quality score but that is due to the reads being later in the sequencing run.  
 
@@ -215,8 +212,16 @@ Overall, this data seems to be of good quality, none of the error bars of fastqc
 ![](./fqcout_raw/report/32_R2_per_base_quality.png)
 ![](./fqcout_raw/report/32_R2_per_base_n_content.png)
 
-## TODO
+Table of the times for each of these commands as timed with `/usr/bin/time -v`
 
+| File 	| Time of FastQC | Time of custom python script	|
+| --- 	| --- 	| --- 	| 
+| 27_4C_mbnl_S19_L008_R1 | 0:31.36 | 1:36.44 | 
+| 27_4C_mbnl_S19_L008_R2 |0:30.18 | 1:29.58 |
+| 32_4G_both_S23_L008_R1 |0:46.33 | 2:26.40 |
+| 32_4G_both_S23_L008_R2 |0:46.21 | 2:26.72 |
+
+## TODO
 
 # Part 2
 
