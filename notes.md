@@ -176,46 +176,46 @@ rm -r 32_4G_both_S23_L008_R2_001_fastqc
 cd ..
 ```
 
-The read 1 files' quality is much better than the read 2s' quality score but that is due to the reads being later in the sequencing run.  
+Script [mean_qual.py](./mean_qual.py) from demultiplex assignment. I had to edit it slightly, it only produces plot for a single file at a time, which it now takes in with argparse. I renamed it from `mean_qual_fq.py` as it was in the demultiplex assignment. 
 
-### FastQC outputs from raw files
-### 27_4C_mbnl_S19_L008_R1
-![](./fqcout_raw/report/27_R1_per_base_quality.png)
-![](./fqcout_raw/report/27_R1_per_base_n_content.png)
-![](./fqcout_raw/report/27_R1_myplot.png)
-
-### 27_4C_mbnl_S19_L008_R2
-![](./fqcout_raw/report/27_R2_per_base_quality.png)
-![](./fqcout_raw/report/27_R2_per_base_n_content.png)
-![](./fqcout_raw/report/27_R2_myplot.png)
-
-### 32_4G_both_S23_L008_R1
-![](./fqcout_raw/report/32_R1_per_base_quality.png)
-![](./fqcout_raw/report/32_R1_per_base_n_content.png)
-![](./fqcout_raw/report/32_R1_myplot.png)
-
-### 32_4G_both_S23_L008_R2
-![](./fqcout_raw/report/32_R2_per_base_quality.png)
-![](./fqcout_raw/report/32_R2_per_base_n_content.png)
-![](./fqcout_raw/report/32_R2_myplot.png)
-
-## TODO
-
-Script [mean_qual.py](./mean_qual.py) from demultiplex assignment. I had to edit it slightly, it only produces plot for a single file at a time, which it now takes in with argparse. I renamed it slightly from `mean_qual_fq.py` as it was in the demultiplex assignment. 
-
-I need to re-run the fastqc of the data in a slurm script using `/usr/bin/time -v ` commands so that I compare to the python script that I made. 
+I need to re-run the fastqc of the data in a slurm script using `/usr/bin/time -v ` commands so that I compare to the python script that I made for assignment demultiplexing in Bi622
 
 [comp_demultplexqc.sh](./comp_demultiplexqc.sh)
 
-Run quality score plotting script from Demultiplexing assignment in Bi622. (make sure this is using a running sum strategy). 
-Describe how these plots differ from FastQC.
 
-Comment on whether or not they are consistent with the quality score plots.
-If different, propose an explanation. 
-Does the runtime differ? Mem/CPU usage? If so, why?
+The plots I generated are basically the same in terms of what information they displey, however the FastQc plots include error bars, which might be variance or interquartile range. 
 
-Comment on overall quality. make a recommendation on whether this data is suited to use for further analysis. 
+See [slurm-15932418.out](./slurm-15932418.out)
 
+COMMENT ON TIME COMMANDS HERE
+
+The read 1 files' quality is much better than the read 2s' quality score but that is due to the reads being later in the sequencing run.  
+
+Overall, this data seems to be of good quality, none of the error bars of fastqc output seem to have dipped into the red regions so that must at least be sufficient quality to do something with.
+
+### FastQC outputs from raw files
+
+### 27_4C_mbnl_S19_L008_R1
+![](./fqcout_raw/report/27_R1_myplot.png)
+![](./fqcout_raw/report/27_R1_per_base_quality.png)
+![](./fqcout_raw/report/27_R1_per_base_n_content.png)
+
+### 27_4C_mbnl_S19_L008_R2
+![](./fqcout_raw/report/27_R2_myplot.png)
+![](./fqcout_raw/report/27_R2_per_base_quality.png)
+![](./fqcout_raw/report/27_R2_per_base_n_content.png)
+
+### 32_4G_both_S23_L008_R1
+![](./fqcout_raw/report/32_R1_myplot.png)
+![](./fqcout_raw/report/32_R1_per_base_quality.png)
+![](./fqcout_raw/report/32_R1_per_base_n_content.png)
+
+### 32_4G_both_S23_L008_R2
+![](./fqcout_raw/report/32_R2_myplot.png)
+![](./fqcout_raw/report/32_R2_per_base_quality.png)
+![](./fqcout_raw/report/32_R2_per_base_n_content.png)
+
+## TODO
 
 
 # Part 2
