@@ -182,22 +182,22 @@ The read 1 files' quality is much better than the read 2s' quality score but tha
 ### 27_4C_mbnl_S19_L008_R1
 ![](./fqcout_raw/report/27_R1_per_base_quality.png)
 ![](./fqcout_raw/report/27_R1_per_base_n_content.png)
-![](./fqcout_raw/report/27_R1_per_base_myplot.png)
+![](./fqcout_raw/report/27_R1_myplot.png)
 
 ### 27_4C_mbnl_S19_L008_R2
 ![](./fqcout_raw/report/27_R2_per_base_quality.png)
 ![](./fqcout_raw/report/27_R2_per_base_n_content.png)
-![](./fqcout_raw/report/27_R2_per_base_myplot.png)
+![](./fqcout_raw/report/27_R2_myplot.png)
 
 ### 32_4G_both_S23_L008_R1
 ![](./fqcout_raw/report/32_R1_per_base_quality.png)
 ![](./fqcout_raw/report/32_R1_per_base_n_content.png)
-![](./fqcout_raw/report/32_R1_per_base_myplot.png)
+![](./fqcout_raw/report/32_R1_myplot.png)
 
 ### 32_4G_both_S23_L008_R2
 ![](./fqcout_raw/report/32_R2_per_base_quality.png)
 ![](./fqcout_raw/report/32_R2_per_base_n_content.png)
-![](./fqcout_raw/report/32_R2_per_base_myplot.png)
+![](./fqcout_raw/report/32_R2_myplot.png)
 
 ## TODO
 
