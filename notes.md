@@ -33,9 +33,17 @@ Wes	27_4C_mbnl_S19_L008	32_4G_both_S23_L008
 Zach	3_2B_control_S3_L008	28_4D_mbnl_S20_L008
 ```
 
-My name is `Wes` so I will use files `27_4C_mbnl_S19_L008` and `32_4G_both_S23_L008`.  
+My name is `Wes` so I will use files `27_4C_mbnl_S19_L008` and `32_4G_both_S23_L008` (R1 and R2 for each of these files, so 4 total).  
 
 The demultiplexed, gzipped `.fastq` files are here: ```/projects/bgmp/shared/2017_sequencing/demultiplexed/```
+
+```
+Input files:
+/projects/bgmp/shared/2017_sequencing/demultiplexed/27_4C_mbnl_S19_L008_R1_001.fastq.gz
+/projects/bgmp/shared/2017_sequencing/demultiplexed/27_4C_mbnl_S19_L008_R2_001.fastq.gz
+/projects/bgmp/shared/2017_sequencing/demultiplexed/32_4G_both_S23_L008_R1_001.fastq.gz
+/projects/bgmp/shared/2017_sequencing/demultiplexed/32_4G_both_S23_L008_R2_001.fastq.gz
+```
 
 Do not move, copy, or unzip this data!
 
@@ -437,15 +445,64 @@ Paired-end options:
 ```
 </details> 
 
-
+<details>   
+<summary> `trimmomatic --help` </summary> 
+<br> 
+```
+Usage:
+       PE [-version] [-threads <threads>] [-phred33|-phred64] [-trimlog <trimLogFile>] [-summary <statsSummaryFile>] [-quiet] [-validatePairs] [-basein <inputBase> | <inputFile1> <inputFile2>] [-baseout <outputBase> | <outputFile1P> <outputFile1U> <outputFile2P> <outputFile2U>] <trimmer1>...
+   or:
+       SE [-version] [-threads <threads>] [-phred33|-phred64] [-trimlog <trimLogFile>] [-summary <statsSummaryFile>] [-quiet] <inputFile> <outputFile> <trimmer1>...
+   or:
+       -version
+```
+</details>   
 
 # TODO
 
-Using `cutadapt` trim adapter sequences from these files. Use default settings. WHat proportion of reads (both R1 and R2) were trimmed?
+Using `cutadapt` trim adapter sequences from these files. Use default settings. What proportion of reads (both R1 and R2) were trimmed?
+
+
+---
+
+This is going to go into a script
+
+```
+cutadapt -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCA -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGT -o cut.file_r1.fastq -p cut.file_r2.fastq /projects/bgmp/shared/2017_sequencing/demultiplexed/27_4C_mbnl_S19_L008_R1_001.fastq.gz /projects/bgmp/shared/2017_sequencing/demultiplexed/27_4C_mbnl_S19_L008_R2_001.fastq.gz
+```
+
+This above command worked. here are the file names I want to use in the bash script: 
+```
+/projects/bgmp/shared/2017_sequencing/demultiplexed/27_4C_mbnl_S19_L008_R1_001.fastq.gz
+/projects/bgmp/wesg/bioinfo/Bi623/QAA/cut_27_4C_mbnl_S19_L008_R1_001.fastq.gz
+ 
+/projects/bgmp/shared/2017_sequencing/demultiplexed/27_4C_mbnl_S19_L008_R2_001.fastq.gz
+/projects/bgmp/wesg/bioinfo/Bi623/QAA/cut_27_4C_mbnl_S19_L008_R2_001.fastq.gz
+
+/projects/bgmp/shared/2017_sequencing/demultiplexed/32_4G_both_S23_L008_R1_001.fastq.gz
+/projects/bgmp/wesg/bioinfo/Bi623/QAA/cut_32_4G_both_S23_L008_R1_001.fastq.gz
+
+/projects/bgmp/shared/2017_sequencing/demultiplexed/32_4G_both_S23_L008_R2_001.fastq.gz
+/projects/bgmp/wesg/bioinfo/Bi623/QAA/cut_32_4G_both_S23_L008_R2_001.fastq.gz
+```
+
+
+Trimmomatic: 
+```
+PE /
+	something \
+	another \
+	A third part of this command 
+``` 
+
+---
+
+
+
 
 Use unix commands to search for the adapter sequences in the data sets and confirm the expected sequence orientations. Report commands used for this and the reasoning behind them and how the adapter sequences are confirmed. 
 
-Use `trimmomatic` to quality trim reads. Specify the fillowing, **in this order**:
+Use `trimmomatic` to quality trim reads. Specify the following, **in this order**:
 - LEADING: quality of 3
 - TRAILING: quality of 3
 - SLIDING WINDOW: window size of 5 and required quality of 15
