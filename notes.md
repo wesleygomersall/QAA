@@ -237,10 +237,9 @@ conda install trimmomatic=0.39
 
 Read `man` page for `cutadapt`. 
 
-<summary> 
+<summary> `cutadapt --help`
 
-<details> `cutadapt --help`  </details> 
-
+<details>   
 cutadapt version 4.9
 
 Copyright (C) 2010 Marcel Martin <marcel.martin@scilifelab.se> and contributors
@@ -434,6 +433,7 @@ Paired-end options:
   --too-long-paired-output FILE
                         Write second read in a pair to this file if pair is too long.
 
+</details> 
 
 </summary> 
 
