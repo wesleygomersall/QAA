@@ -237,9 +237,10 @@ conda install trimmomatic=0.39
 
 Read `man` page for `cutadapt`. 
 
-<summary> `cutadapt --help`
-
 <details>   
+<summary> `cutadapt --help` </summary> 
+<br> 
+
 cutadapt version 4.9
 
 Copyright (C) 2010 Marcel Martin <marcel.martin@scilifelab.se> and contributors
@@ -435,7 +436,7 @@ Paired-end options:
 
 </details> 
 
-</summary> 
+
 
 # TODO
 
