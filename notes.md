@@ -458,54 +458,14 @@ Usage:
 ```
 </details>   
 
-In script [cutntrim.sh](cutntrim.sh) these samples are adapter trimmed and then quality trimmed. I create a custom plotting script [pairedreadlengthdist.py](pairedreadlengthdist.py)
-
-# TODO
+In script [cutntrim.sh](cutntrim.sh) these samples are adapter trimmed and then quality trimmed. I create a custom plotting script [pairedreadlengthdist.py](pairedreadlengthdist.py). Afterwards make fastqc outputs to compare to the raw reads. 
 
 Using `cutadapt` trim adapter sequences from these files. Use default settings. What proportion of reads (both R1 and R2) were trimmed?
 
+# TODO
+### Use unix commands to search for the adapter sequences in the data sets and confirm the expected sequence orientations. Report commands used for this and the reasoning behind them and how the adapter sequences are confirmed. 
 
----
-
-This is going to go into a script
-
-```
-cutadapt -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCA -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGT -o /projects/bgmp/wesg/bioinfo/Bi623/QAA/cut_27_4C_mbnl_S19_L008_R1_001.fastq -p /projects/bgmp/wesg/bioinfo/Bi623/QAA/cut_27_4C_mbnl_S19_L008_R2_001.fastq /projects/bgmp/shared/2017_sequencing/demultiplexed/27_4C_mbnl_S19_L008_R1_001.fastq.gz /projects/bgmp/shared/2017_sequencing/demultiplexed/27_4C_mbnl_S19_L008_R2_001.fastq.gz
-
-trimmomatic PE cut_27_4C_mbnl_S19_L008_R1_001.fastq cut_27_4C_mbnl_S19_L008_R1_001.fastq trim_cut_27_4C_mbnl_S19_L008_R1_001.fastq untrim_cut_27_4C_mbnl_S19_L008_R1_001.fastq trim_cut_27_4C_mbnl_S19_L008_R2_001.fastq untrim_cut_27_4C_mbnl_S19_L008_R2_001.fastq LEADING:3 TRAILING:3 SLIDINGWINDOW:5:15 MINLEN:35
-```
-
-This above command worked. here are the file names I want to use in the bash script: 
-```
-/projects/bgmp/shared/2017_sequencing/demultiplexed/27_4C_mbnl_S19_L008_R1_001.fastq.gz
-/projects/bgmp/wesg/bioinfo/Bi623/QAA/cut_27_4C_mbnl_S19_L008_R1_001.fastq
- 
-/projects/bgmp/shared/2017_sequencing/demultiplexed/27_4C_mbnl_S19_L008_R2_001.fastq.gz
-/projects/bgmp/wesg/bioinfo/Bi623/QAA/cut_27_4C_mbnl_S19_L008_R2_001.fastq
-
-/projects/bgmp/shared/2017_sequencing/demultiplexed/32_4G_both_S23_L008_R1_001.fastq.gz
-/projects/bgmp/wesg/bioinfo/Bi623/QAA/cut_32_4G_both_S23_L008_R1_001.fastq
-
-/projects/bgmp/shared/2017_sequencing/demultiplexed/32_4G_both_S23_L008_R2_001.fastq.gz
-/projects/bgmp/wesg/bioinfo/Bi623/QAA/cut_32_4G_both_S23_L008_R2_001.fastq
-```
-
-
-Trimmomatic: 
-```
-trimmomatic PE cut_27_4C_mbnl_S19_L008_R1_001.fastq cut_27_4C_mbnl_S19_L008_R1_001.fastq \
-	trim_cut_27_4C_mbnl_S19_L008_R1_001.fastq untrim_cut_27_4C_mbnl_S19_L008_R1_001.fastq \
-	trim_cut_27_4C_mbnl_S19_L008_R2_001.fastq untrim_cut_27_4C_mbnl_S19_L008_R2_001.fastq \
-	LEADING:3 TRAILING:3 SLIDINGWINDOW:5:15 MINLEN:35
-``` 
-
----
-
-
-
-
-Use unix commands to search for the adapter sequences in the data sets and confirm the expected sequence orientations. Report commands used for this and the reasoning behind them and how the adapter sequences are confirmed. 
-
+(Adapters are 33 bases long)
 Use `trimmomatic` to quality trim reads. Specify the following, **in this order**:
 - LEADING: quality of 3
 - TRAILING: quality of 3
@@ -513,15 +473,25 @@ Use `trimmomatic` to quality trim reads. Specify the following, **in this order*
 - MINLENGTH: 35 bases
 
 Output compressed files to this directory 
-`/projects/bgmp/wesg/bioinfo/Bi623/QAA`
+`/projects/bgmp/wesg/bioinfo/Bi623/QAA/fqcout_cutntrim`
 and clear out intermediate files. 
 
 Plot the trimmed read length distributions for both the R1 and R2 reads on the same plot (see ICA4).
 Produce 2 different plots for the 2 different RNA samples.
 
-Comment on whether you expect R1s and R2s to be adapter-trimmed at different rates and why.
+Run `FastQC` on trimmed data.
 
-Run `FastQC` on trimmed data. Comment on differences between the trimmed and untrimmed data. Include any figures needed to support your conclusions.
+When testing, these two commands below worked:
+
+```
+cutadapt -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCA -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGT -o /projects/bgmp/wesg/bioinfo/Bi623/QAA/cut_27_4C_mbnl_S19_L008_R1_001.fastq -p /projects/bgmp/wesg/bioinfo/Bi623/QAA/cut_27_4C_mbnl_S19_L008_R2_001.fastq /projects/bgmp/shared/2017_sequencing/demultiplexed/27_4C_mbnl_S19_L008_R1_001.fastq.gz /projects/bgmp/shared/2017_sequencing/demultiplexed/27_4C_mbnl_S19_L008_R2_001.fastq.gz
+
+trimmomatic PE cut_27_4C_mbnl_S19_L008_R1_001.fastq cut_27_4C_mbnl_S19_L008_R1_001.fastq trim_cut_27_4C_mbnl_S19_L008_R1_001.fastq untrim_cut_27_4C_mbnl_S19_L008_R1_001.fastq trim_cut_27_4C_mbnl_S19_L008_R2_001.fastq untrim_cut_27_4C_mbnl_S19_L008_R2_001.fastq LEADING:3 TRAILING:3 SLIDINGWINDOW:5:15 MINLEN:35
+```
+
+# TODO
+
+Comment on whether you expect R1s and R2s to be adapter-trimmed at different rates and why.
 
 # Part 3
 
