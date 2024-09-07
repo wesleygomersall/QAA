@@ -458,6 +458,8 @@ Usage:
 ```
 </details>   
 
+In script [cutntrim.sh](cutntrim.sh) these samples are adapter trimmed and then quality trimmed. I create a custom plotting script [pairedreadlengthdist.py](pairedreadlengthdist.py)
+
 # TODO
 
 Using `cutadapt` trim adapter sequences from these files. Use default settings. What proportion of reads (both R1 and R2) were trimmed?
@@ -468,31 +470,33 @@ Using `cutadapt` trim adapter sequences from these files. Use default settings. 
 This is going to go into a script
 
 ```
-cutadapt -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCA -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGT -o cut.file_r1.fastq -p cut.file_r2.fastq /projects/bgmp/shared/2017_sequencing/demultiplexed/27_4C_mbnl_S19_L008_R1_001.fastq.gz /projects/bgmp/shared/2017_sequencing/demultiplexed/27_4C_mbnl_S19_L008_R2_001.fastq.gz
+cutadapt -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCA -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGT -o /projects/bgmp/wesg/bioinfo/Bi623/QAA/cut_27_4C_mbnl_S19_L008_R1_001.fastq -p /projects/bgmp/wesg/bioinfo/Bi623/QAA/cut_27_4C_mbnl_S19_L008_R2_001.fastq /projects/bgmp/shared/2017_sequencing/demultiplexed/27_4C_mbnl_S19_L008_R1_001.fastq.gz /projects/bgmp/shared/2017_sequencing/demultiplexed/27_4C_mbnl_S19_L008_R2_001.fastq.gz
+
+trimmomatic PE cut_27_4C_mbnl_S19_L008_R1_001.fastq cut_27_4C_mbnl_S19_L008_R1_001.fastq trim_cut_27_4C_mbnl_S19_L008_R1_001.fastq untrim_cut_27_4C_mbnl_S19_L008_R1_001.fastq trim_cut_27_4C_mbnl_S19_L008_R2_001.fastq untrim_cut_27_4C_mbnl_S19_L008_R2_001.fastq LEADING:3 TRAILING:3 SLIDINGWINDOW:5:15 MINLEN:35
 ```
 
 This above command worked. here are the file names I want to use in the bash script: 
 ```
 /projects/bgmp/shared/2017_sequencing/demultiplexed/27_4C_mbnl_S19_L008_R1_001.fastq.gz
-/projects/bgmp/wesg/bioinfo/Bi623/QAA/cut_27_4C_mbnl_S19_L008_R1_001.fastq.gz
+/projects/bgmp/wesg/bioinfo/Bi623/QAA/cut_27_4C_mbnl_S19_L008_R1_001.fastq
  
 /projects/bgmp/shared/2017_sequencing/demultiplexed/27_4C_mbnl_S19_L008_R2_001.fastq.gz
-/projects/bgmp/wesg/bioinfo/Bi623/QAA/cut_27_4C_mbnl_S19_L008_R2_001.fastq.gz
+/projects/bgmp/wesg/bioinfo/Bi623/QAA/cut_27_4C_mbnl_S19_L008_R2_001.fastq
 
 /projects/bgmp/shared/2017_sequencing/demultiplexed/32_4G_both_S23_L008_R1_001.fastq.gz
-/projects/bgmp/wesg/bioinfo/Bi623/QAA/cut_32_4G_both_S23_L008_R1_001.fastq.gz
+/projects/bgmp/wesg/bioinfo/Bi623/QAA/cut_32_4G_both_S23_L008_R1_001.fastq
 
 /projects/bgmp/shared/2017_sequencing/demultiplexed/32_4G_both_S23_L008_R2_001.fastq.gz
-/projects/bgmp/wesg/bioinfo/Bi623/QAA/cut_32_4G_both_S23_L008_R2_001.fastq.gz
+/projects/bgmp/wesg/bioinfo/Bi623/QAA/cut_32_4G_both_S23_L008_R2_001.fastq
 ```
 
 
 Trimmomatic: 
 ```
-PE /
-	something \
-	another \
-	A third part of this command 
+trimmomatic PE cut_27_4C_mbnl_S19_L008_R1_001.fastq cut_27_4C_mbnl_S19_L008_R1_001.fastq \
+	trim_cut_27_4C_mbnl_S19_L008_R1_001.fastq untrim_cut_27_4C_mbnl_S19_L008_R1_001.fastq \
+	trim_cut_27_4C_mbnl_S19_L008_R2_001.fastq untrim_cut_27_4C_mbnl_S19_L008_R2_001.fastq \
+	LEADING:3 TRAILING:3 SLIDINGWINDOW:5:15 MINLEN:35
 ``` 
 
 ---
@@ -515,7 +519,7 @@ and clear out intermediate files.
 Plot the trimmed read length distributions for both the R1 and R2 reads on the same plot (see ICA4).
 Produce 2 different plots for the 2 different RNA samples.
 
-Comment on whether you ecpect R1s and R2s to be adapter-trimmed at different rates and why.
+Comment on whether you expect R1s and R2s to be adapter-trimmed at different rates and why.
 
 Run `FastQC` on trimmed data. Comment on differences between the trimmed and untrimmed data. Include any figures needed to support your conclusions.
 
@@ -536,7 +540,7 @@ Ensure the script is looking at the bitwise flag to determine primary or seconda
 
 Use `htseq-count` to count reads that map to features. Run this twice. Once with `--stranded=yes` and again with `--stranded=reverse`. Use default parameters otherwise.
 
-Determin and support whether or not the data are from strand-specific RNA-Seq libraries. Include commands and scripts used. Briefly describe evidence with quantitative statements (e.g. "I propose that these data are/are not strand-specific, because X% of the reads are y, as opposed to z."). Remember ICA4.
+Determine and support whether or not the data are from strand-specific RNA-Seq libraries. Include commands and scripts used. Briefly describe evidence with quantitative statements (e.g. "I propose that these data are/are not strand-specific, because X% of the reads are y, as opposed to z."). Remember ICA4.
 
 Review the [metadata](./metadata) available to you and see if this information leads to any additional insight of your analysis.
 
