@@ -484,9 +484,16 @@ Run `FastQC` on trimmed data.
 When testing, these two commands below worked:
 
 ```
-cutadapt -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCA -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGT -o /projects/bgmp/wesg/bioinfo/Bi623/QAA/cut_27_4C_mbnl_S19_L008_R1_001.fastq -p /projects/bgmp/wesg/bioinfo/Bi623/QAA/cut_27_4C_mbnl_S19_L008_R2_001.fastq /projects/bgmp/shared/2017_sequencing/demultiplexed/27_4C_mbnl_S19_L008_R1_001.fastq.gz /projects/bgmp/shared/2017_sequencing/demultiplexed/27_4C_mbnl_S19_L008_R2_001.fastq.gz
+cutadapt -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCA -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGT \
+	-o /projects/bgmp/wesg/bioinfo/Bi623/QAA/cut_27_4C_mbnl_S19_L008_R1_001.fastq \
+	-p /projects/bgmp/wesg/bioinfo/Bi623/QAA/cut_27_4C_mbnl_S19_L008_R2_001.fastq \
+	/projects/bgmp/shared/2017_sequencing/demultiplexed/27_4C_mbnl_S19_L008_R1_001.fastq.gz \
+	/projects/bgmp/shared/2017_sequencing/demultiplexed/27_4C_mbnl_S19_L008_R2_001.fastq.gz
 
-trimmomatic PE cut_27_4C_mbnl_S19_L008_R1_001.fastq cut_27_4C_mbnl_S19_L008_R1_001.fastq trim_cut_27_4C_mbnl_S19_L008_R1_001.fastq untrim_cut_27_4C_mbnl_S19_L008_R1_001.fastq trim_cut_27_4C_mbnl_S19_L008_R2_001.fastq untrim_cut_27_4C_mbnl_S19_L008_R2_001.fastq LEADING:3 TRAILING:3 SLIDINGWINDOW:5:15 MINLEN:35
+trimmomatic PE cut_27_4C_mbnl_S19_L008_R1_001.fastq cut_27_4C_mbnl_S19_L008_R1_001.fastq \
+	trim_cut_27_4C_mbnl_S19_L008_R1_001.fastq untrim_cut_27_4C_mbnl_S19_L008_R1_001.fastq \
+	trim_cut_27_4C_mbnl_S19_L008_R2_001.fastq untrim_cut_27_4C_mbnl_S19_L008_R2_001.fastq \
+	LEADING:3 TRAILING:3 SLIDINGWINDOW:5:15 MINLEN:35
 ```
 
 # TODO
@@ -501,7 +508,7 @@ In QAA environment install:
 - `matplotlib`
 - `htseq`
 
-Download mouse genome fasta files from Ensemble release 112. Generate an alignment database from them. Align the rease to the mouse genomic databse using a splice-aware aligner. Use the settings specified in PS9 from Bi 621. 
+Download mouse genome fasta files from Ensemble release 112. Generate an alignment database from them. Align the reads to the mouse genomic database using a splice-aware aligner. Use the settings specified in PS9 from Bi 621. 
 
 See gene models from PS8. Necessary to perform splice-aware alignment. 
 
