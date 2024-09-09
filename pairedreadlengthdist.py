@@ -85,10 +85,24 @@ else:
 # First column is read length second column is count of reads of that particular length
 npar_r1_len_dist = np.array(list(r1_lengthdist.items()))
 print(npar_r1_len_dist)
-
+npar_r1_len_dist = npar_r1_len_dist[npar_r1_len_dist[:,0].argsort()] 
+print(npar_r1_len_dist)
 if paired:
     npar_r2_len_dist = np.array(list(r2_lengthdist.items()))
+    npar_r2_len_dist = npar_r2_len_dist[npar_r2_len_dist[:,0].argsort()] 
     print(npar_r2_len_dist)
 
 # plot output with matplotlib 
     # plot first file, if second exists, plot it on the same exact axes. 
+    plt.figure(figsize=(10,6))
+    plt.plot(npar_r1_len_dist[:,0], npar_r1_len_dist[:,1])
+    plt.plot(npar_r2_len_dist[:,0], npar_r2_len_dist[:,1])
+else: 
+    plt.figure(figsize=(10,6))
+    plt.plot(npar_r1_len_dist[:,0], npar_r1_len_dist[:,1])
+
+plt.title('Read length distribution')
+plt.xlabel('Read Length')
+plt.ylabel('Frequency')
+
+plt.savefig(OUTPUT)
