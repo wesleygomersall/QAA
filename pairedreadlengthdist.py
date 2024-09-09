@@ -22,7 +22,7 @@ r2_lengthdist = dict()
 if READ1.endswith(".gz"): 
     compressed = True
 
-    with gzip.open(READ1, 'r') as r1: # need to use gzip to open file
+    with gzip.open(READ1, 'rt') as r1: # need to use gzip to open file
         for i, line in enumerate(r1):
 
             if (i + 1) % 4 == 2: # if it is sequence line
@@ -57,7 +57,7 @@ else:
     if READ2.endswith(".gz"): 
         r2compressed = True
     
-        with gzip.open(READ2, 'r') as r2: # need to use gzip to open file
+        with gzip.open(READ2, 'rt') as r2: # need to use gzip to open file
             for i, line in enumerate(r2):
     
                 if (i + 1) % 4 == 2:
@@ -95,17 +95,19 @@ if paired:
     plt.figure(figsize=(10,6))
     print("plotting R1")
     print(npar_r1_len_dist)
-    plt.plot(npar_r1_len_dist[:,0], npar_r1_len_dist[:,1])
+    plt.plot(npar_r1_len_dist[:,0], npar_r1_len_dist[:,1], color="b", label="Read 1")
+
     print("plotting R2")
     print(npar_r2_len_dist)
-    plt.plot(npar_r2_len_dist[:,0], npar_r2_len_dist[:,1])
+    plt.plot(npar_r2_len_dist[:,0], npar_r2_len_dist[:,1], color="r", label="Read 2")
 else: 
     plt.figure(figsize=(10,6))
-    plt.plot(npar_r1_len_dist[:,0], npar_r1_len_dist[:,1])
+    plt.plot(npar_r1_len_dist[:,0], npar_r1_len_dist[:,1], color="b", label="Read 1")
 
 plt.yscale("log")
 plt.title('Read length distribution')
 plt.xlabel('Read Length')
 plt.ylabel('Frequency')
+plt.legend()
 
 plt.savefig(OUTPUT)
