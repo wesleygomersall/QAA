@@ -1,0 +1,1361 @@
+# packages in environment at /projects/bgmp/wesg/miniforge3/envs/QAA:
+#
+# Name                    Version                   Build  Channel
+_libgcc_mutex             0.1                 conda_forge    conda-forge
+_openmp_mutex             4.5                       2_gnu    conda-forge
+alsa-lib                  1.2.12               h4ab18f5_0    conda-forge
+bzip2                     1.0.8                h4bc722e_7    conda-forge
+ca-certificates           2024.8.30            hbcca054_0    conda-forge
+cairo                     1.18.0               hebfffa5_3    conda-forge
+cffi                      1.17.1          py312h06ac9bb_0    conda-forge
+cutadapt                  4.9             py312hf67a6ed_1    bioconda
+dnaio                     1.2.1           py312hf67a6ed_2    bioconda
+expat                     2.6.2                h59595ed_0    conda-forge
+fastqc                    0.12.1               hdfd78af_0    bioconda
+font-ttf-dejavu-sans-mono 2.37                 hab24e00_0    conda-forge
+font-ttf-inconsolata      3.000                h77eed37_0    conda-forge
+font-ttf-source-code-pro  2.038                h77eed37_0    conda-forge
+font-ttf-ubuntu           0.83                 h77eed37_2    conda-forge
+fontconfig                2.14.2               h14ed4e7_0    conda-forge
+fonts-conda-ecosystem     1                             0    conda-forge
+fonts-conda-forge         1                             0    conda-forge
+freetype                  2.12.1               h267a509_2    conda-forge
+giflib                    5.2.2                hd590300_0    conda-forge
+graphite2                 1.3.13            h59595ed_1003    conda-forge
+harfbuzz                  9.0.0                hda332d3_1    conda-forge
+icu                       75.1                 he02047a_0    conda-forge
+isa-l                     2.31.0               h4bc722e_2    conda-forge
+keyutils                  1.6.1                h166bdaf_0    conda-forge
+krb5                      1.21.3               h659f571_0    conda-forge
+lcms2                     2.16                 hb7c19ff_0    conda-forge
+ld_impl_linux-64          2.40                 hf3520f5_7    conda-forge
+lerc                      4.0.0                h27087fc_0    conda-forge
+libcups                   2.3.3                h4637d8d_4    conda-forge
+libdeflate                1.21                 h4bc722e_0    conda-forge
+libedit                   3.1.20191231         he28a2e2_2    conda-forge
+libexpat                  2.6.2                h59595ed_0    conda-forge
+libffi                    3.4.2                h7f98852_5    conda-forge
+libgcc                    14.1.0               h77fa898_1    conda-forge
+libgcc-ng                 14.1.0               h69a702a_1    conda-forge
+libglib                   2.80.3               h315aac3_2    conda-forge
+libgomp                   14.1.0               h77fa898_1    conda-forge
+libiconv                  1.17                 hd590300_2    conda-forge
+libjpeg-turbo             3.0.0                hd590300_1    conda-forge
+libnsl                    2.0.1                hd590300_0    conda-forge
+libpng                    1.6.43               h2797004_0    conda-forge
+libsqlite                 3.46.1               hadc24fc_0    conda-forge
+libstdcxx                 14.1.0               hc0a3c3a_1    conda-forge
+libstdcxx-ng              14.1.0               h4852527_1    conda-forge
+libtiff                   4.6.0                h46a8edc_4    conda-forge
+libuuid                   2.38.1               h0b41bf4_0    conda-forge
+libwebp-base              1.4.0                hd590300_0    conda-forge
+libxcb                    1.16                 hb9d3cd8_1    conda-forge
+libxcrypt                 4.4.36               hd590300_1    conda-forge
+libzlib                   1.3.1                h4ab18f5_1    conda-forge
+ncurses                   6.5                  h59595ed_0    conda-forge
+openjdk                   22.0.1               h8651b0f_1    conda-forge
+openssl                   3.3.2                hb9d3cd8_0    conda-forge
+pbzip2                    1.1.13               h1fcc475_2    conda-forge
+pcre2                     10.44                hba22ea6_2    conda-forge
+perl                      5.32.1          7_hd590300_perl5    conda-forge
+pigz                      2.8                  h2797004_0    conda-forge
+pip                       24.2               pyh8b19718_1    conda-forge
+pixman                    0.43.2               h59595ed_0    conda-forge
+pthread-stubs             0.4               h36c2ea0_1001    conda-forge
+pycparser                 2.22               pyhd8ed1ab_0    conda-forge
+python                    3.12.5          h2ad013b_0_cpython    conda-forge
+python-isal               1.7.0           py312h66e93f0_1    conda-forge
+python-zlib-ng            0.5.0           py312h1ba79a0_1    conda-forge
+python_abi                3.12                    5_cp312    conda-forge
+readline                  8.2                  h8228510_1    conda-forge
+setuptools                73.0.1             pyhd8ed1ab_0    conda-forge
+tk                        8.6.13          noxft_h4845f30_101    conda-forge
+trimmomatic               0.39                 hdfd78af_2    bioconda
+tzdata                    2024a                h8827d51_1    conda-forge
+wheel                     0.44.0             pyhd8ed1ab_0    conda-forge
+xopen                     2.0.2              pyh707e725_1    conda-forge
+xorg-fixesproto           5.0               h7f98852_1002    conda-forge
+xorg-inputproto           2.3.2             h7f98852_1002    conda-forge
+xorg-kbproto              1.0.7             h7f98852_1002    conda-forge
+xorg-libice               1.1.1                hd590300_0    conda-forge
+xorg-libsm                1.2.4                h7391055_0    conda-forge
+xorg-libx11               1.8.9                hb711507_1    conda-forge
+xorg-libxau               1.0.11               hd590300_0    conda-forge
+xorg-libxdmcp             1.1.3                h7f98852_0    conda-forge
+xorg-libxext              1.3.4                h0b41bf4_2    conda-forge
+xorg-libxfixes            5.0.3             h7f98852_1004    conda-forge
+xorg-libxi                1.7.10               h4bc722e_1    conda-forge
+xorg-libxrender           0.9.11               hd590300_0    conda-forge
+xorg-libxt                1.3.0                hd590300_1    conda-forge
+xorg-libxtst              1.2.5                h4bc722e_0    conda-forge
+xorg-recordproto          1.14.2            h7f98852_1002    conda-forge
+xorg-renderproto          0.11.1            h7f98852_1002    conda-forge
+xorg-xextproto            7.3.0             h0b41bf4_1003    conda-forge
+xorg-xproto               7.0.31            h7f98852_1007    conda-forge
+xz                        5.2.6                h166bdaf_0    conda-forge
+zlib                      1.3.1                h4ab18f5_1    conda-forge
+zlib-ng                   2.2.1                he02047a_0    conda-forge
+zstandard                 0.23.0          py312hef9b889_1    conda-forge
+zstd                      1.5.6                ha6fb4c9_0    conda-forge
+mkdir: cannot create directory ‘fqcout_cutntrim’: File exists
+mkdir: cannot create directory ‘fqcout_cutntrim/report’: File exists
+This is cutadapt 4.9 with Python 3.12.5
+Command line parameters: -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCA -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGT -o 27_4C_mbnl_S19_L008.R1.cut.fastq.gz -p 27_4C_mbnl_S19_L008.R2.cut.fastq.gz /projects/bgmp/shared/2017_sequencing/demultiplexed/27_4C_mbnl_S19_L008_R1_001.fastq.gz /projects/bgmp/shared/2017_sequencing/demultiplexed/27_4C_mbnl_S19_L008_R2_001.fastq.gz
+Processing paired-end reads on 1 core ...
+Finished in 110.365 s (15.272 µs/read; 3.93 M reads/minute).
+
+=== Summary ===
+
+Total read pairs processed:          7,226,430
+  Read 1 with adapter:                 751,117 (10.4%)
+  Read 2 with adapter:                 803,568 (11.1%)
+Pairs written (passing filters):     7,226,430 (100.0%)
+
+Total basepairs processed: 1,459,738,860 bp
+  Read 1:   729,869,430 bp
+  Read 2:   729,869,430 bp
+Total written (filtered):  1,429,426,877 bp (97.9%)
+  Read 1:   714,826,948 bp
+  Read 2:   714,599,929 bp
+
+=== First read: Adapter 1 ===
+
+Sequence: AGATCGGAAGAGCACACGTCTGAACTCCAGTCA; Type: regular 3'; Length: 33; Trimmed: 751117 times
+
+Minimum overlap: 3
+No. of allowed errors:
+1-9 bp: 0; 10-19 bp: 1; 20-29 bp: 2; 30-33 bp: 3
+
+Bases preceding removed adapters:
+  A: 14.4%
+  C: 28.4%
+  G: 41.4%
+  T: 14.3%
+  none/other: 1.5%
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+3	139077	112913.0	0	139077
+4	41610	28228.2	0	41610
+5	23062	7057.1	0	23062
+6	17612	1764.3	0	17612
+7	16630	441.1	0	16630
+8	16318	110.3	0	16318
+9	16290	27.6	0	16067 223
+10	17031	6.9	1	16356 675
+11	16245	1.7	1	15680 565
+12	16009	0.4	1	15445 564
+13	15877	0.1	1	15289 588
+14	15750	0.0	1	15067 683
+15	15754	0.0	1	15135 619
+16	15534	0.0	1	14818 716
+17	15440	0.0	1	14721 719
+18	15189	0.0	1	14463 717 9
+19	14914	0.0	1	14157 731 26
+20	14348	0.0	2	13598 670 80
+21	14319	0.0	2	13583 663 73
+22	14340	0.0	2	13545 693 102
+23	13783	0.0	2	12945 725 113
+24	13787	0.0	2	12879 807 101
+25	13525	0.0	2	12657 779 89
+26	13128	0.0	2	12267 749 112
+27	12697	0.0	2	11889 691 110 7
+28	12565	0.0	2	11676 762 111 16
+29	11924	0.0	2	11033 779 100 12
+30	11828	0.0	3	10950 746 96 36
+31	11358	0.0	3	10469 732 116 41
+32	10890	0.0	3	10052 691 115 32
+33	10392	0.0	3	9595 648 114 35
+34	10014	0.0	3	9254 625 99 36
+35	9464	0.0	3	8763 589 83 29
+36	9216	0.0	3	8558 549 70 39
+37	8955	0.0	3	8280 589 59 27
+38	8572	0.0	3	7942 533 71 26
+39	7875	0.0	3	7350 452 51 22
+40	7512	0.0	3	6999 440 48 25
+41	6960	0.0	3	6439 447 56 18
+42	6447	0.0	3	5980 404 46 17
+43	5996	0.0	3	5605 341 38 12
+44	5335	0.0	3	4989 293 41 12
+45	4804	0.0	3	4469 296 33 6
+46	4274	0.0	3	3988 243 28 15
+47	4028	0.0	3	3743 251 26 8
+48	3558	0.0	3	3321 212 19 6
+49	3378	0.0	3	3175 178 18 7
+50	3035	0.0	3	2847 162 22 4
+51	2730	0.0	3	2543 147 38 2
+52	2344	0.0	3	2172 153 18 1
+53	2072	0.0	3	1926 118 16 12
+54	1797	0.0	3	1697 88 9 3
+55	1604	0.0	3	1525 68 8 3
+56	1392	0.0	3	1292 89 9 2
+57	1164	0.0	3	1091 59 12 2
+58	1151	0.0	3	1074 68 4 5
+59	992	0.0	3	924 56 10 2
+60	950	0.0	3	886 58 4 2
+61	883	0.0	3	821 47 9 6
+62	769	0.0	3	722 41 5 1
+63	647	0.0	3	607 32 5 3
+64	583	0.0	3	544 32 4 3
+65	515	0.0	3	474 36 5
+66	472	0.0	3	435 34 3
+67	391	0.0	3	370 19 1 1
+68	390	0.0	3	369 21
+69	361	0.0	3	332 22 3 4
+70	328	0.0	3	311 15 1 1
+71	305	0.0	3	280 18 6 1
+72	258	0.0	3	248 9 1
+73	195	0.0	3	176 12 3 4
+74	167	0.0	3	158 9
+75	122	0.0	3	111 11
+76	73	0.0	3	69 3 0 1
+77	67	0.0	3	63 4
+78	46	0.0	3	43 3
+79	42	0.0	3	42
+80	26	0.0	3	23 3
+81	14	0.0	3	14
+82	16	0.0	3	14 2
+83	15	0.0	3	13 2
+84	10	0.0	3	8 2
+85	15	0.0	3	14 1
+86	7	0.0	3	5 1 1
+87	17	0.0	3	16 1
+88	5	0.0	3	4 1
+89	15	0.0	3	14 1
+90	12	0.0	3	11 1
+91	10	0.0	3	9 1
+92	6	0.0	3	6
+93	4	0.0	3	4
+94	2	0.0	3	2
+95	3	0.0	3	3
+96	4	0.0	3	4
+97	1	0.0	3	1
+98	7	0.0	3	7
+99	5	0.0	3	5
+100	2	0.0	3	1 1
+101	11462	0.0	3	5 9983 1382 92
+
+
+=== Second read: Adapter 2 ===
+
+Sequence: AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGT; Type: regular 3'; Length: 33; Trimmed: 803568 times
+
+Minimum overlap: 3
+No. of allowed errors:
+1-9 bp: 0; 10-19 bp: 1; 20-29 bp: 2; 30-33 bp: 3
+
+Bases preceding removed adapters:
+  A: 14.7%
+  C: 30.0%
+  G: 45.1%
+  T: 8.7%
+  none/other: 1.4%
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+3	179746	112913.0	0	179746
+4	48533	28228.2	0	48533
+5	24243	7057.1	0	24243
+6	18502	1764.3	0	18502
+7	16839	441.1	0	16839
+8	16409	110.3	0	16409
+9	16509	27.6	0	16247 262
+10	17185	6.9	1	16572 613
+11	16406	1.7	1	15932 474
+12	16131	0.4	1	15744 387
+13	15945	0.1	1	15561 384
+14	15816	0.0	1	15436 380
+15	15824	0.0	1	15348 476
+16	15638	0.0	1	15190 448
+17	15538	0.0	1	15044 494
+18	15282	0.0	1	14674 605 3
+19	14967	0.0	1	14442 515 10
+20	14401	0.0	2	13781 565 55
+21	14356	0.0	2	13734 551 71
+22	14385	0.0	2	13772 553 60
+23	13841	0.0	2	13280 501 60
+24	13826	0.0	2	13119 627 80
+25	13568	0.0	2	12914 578 76
+26	13171	0.0	2	12504 596 71
+27	12735	0.0	2	12127 532 75 1
+28	12609	0.0	2	11924 589 96
+29	11982	0.0	2	11301 577 96 8
+30	11863	0.0	3	11188 542 96 37
+31	11395	0.0	3	10737 560 71 27
+32	10923	0.0	3	10279 515 106 23
+33	10421	0.0	3	9818 508 64 31
+34	10060	0.0	3	9454 485 88 33
+35	9489	0.0	3	8945 454 65 25
+36	9239	0.0	3	8723 422 71 23
+37	8968	0.0	3	8464 427 52 25
+38	8591	0.0	3	8088 406 62 35
+39	7897	0.0	3	7444 367 46 40
+40	7549	0.0	3	7132 336 56 25
+41	6982	0.0	3	6611 293 54 24
+42	6459	0.0	3	6156 243 40 20
+43	6011	0.0	3	5679 278 36 18
+44	5329	0.0	3	5043 249 24 13
+45	4824	0.0	3	4549 228 28 19
+46	4287	0.0	3	4051 192 30 14
+47	4044	0.0	3	3807 207 17 13
+48	3572	0.0	3	3343 192 23 14
+49	3395	0.0	3	3182 185 21 7
+50	3049	0.0	3	2866 156 18 9
+51	2759	0.0	3	2574 155 15 15
+52	2361	0.0	3	2225 102 17 17
+53	2095	0.0	3	1969 101 9 16
+54	1813	0.0	3	1689 96 21 7
+55	1617	0.0	3	1521 78 8 10
+56	1412	0.0	3	1326 70 10 6
+57	1181	0.0	3	1113 50 10 8
+58	1169	0.0	3	1095 56 11 7
+59	1013	0.0	3	935 69 4 5
+60	966	0.0	3	897 57 8 4
+61	894	0.0	3	844 40 6 4
+62	786	0.0	3	737 40 6 3
+63	669	0.0	3	629 31 7 2
+64	602	0.0	3	567 23 9 3
+65	531	0.0	3	492 29 5 5
+66	490	0.0	3	453 30 5 2
+67	398	0.0	3	375 19 2 2
+68	409	0.0	3	374 28 5 2
+69	382	0.0	3	341 28 9 4
+70	337	0.0	3	314 15 3 5
+71	315	0.0	3	298 15 1 1
+72	267	0.0	3	251 12 3 1
+73	212	0.0	3	180 27 3 2
+74	175	0.0	3	158 13 2 2
+75	135	0.0	3	125 8 2
+76	80	0.0	3	74 4 0 2
+77	81	0.0	3	66 8 6 1
+78	49	0.0	3	46 2 1
+79	51	0.0	3	43 5 2 1
+80	33	0.0	3	28 2 2 1
+81	17	0.0	3	15 1 0 1
+82	18	0.0	3	16 0 2
+83	17	0.0	3	14 1 0 2
+84	14	0.0	3	11 1 1 1
+85	16	0.0	3	13 2 0 1
+86	8	0.0	3	8
+87	18	0.0	3	15 2 1
+88	7	0.0	3	7
+89	18	0.0	3	16 1 0 1
+90	12	0.0	3	9 2 1
+91	9	0.0	3	8 1
+92	6	0.0	3	3 2 1
+93	4	0.0	3	3 1
+94	2	0.0	3	2
+95	4	0.0	3	3 0 0 1
+96	4	0.0	3	3 0 1
+97	1	0.0	3	1
+98	8	0.0	3	4 3 0 1
+99	5	0.0	3	2 2 1
+100	4	0.0	3	0 1 1 2
+101	11360	0.0	3	3 9906 1353 98
+	Command being timed: "cutadapt -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCA -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGT -o 27_4C_mbnl_S19_L008.R1.cut.fastq.gz -p 27_4C_mbnl_S19_L008.R2.cut.fastq.gz /projects/bgmp/shared/2017_sequencing/demultiplexed/27_4C_mbnl_S19_L008_R1_001.fastq.gz /projects/bgmp/shared/2017_sequencing/demultiplexed/27_4C_mbnl_S19_L008_R2_001.fastq.gz"
+	User time (seconds): 109.24
+	System time (seconds): 0.88
+	Percent of CPU this job got: 98%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:51.86
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 37972
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 7544
+	Voluntary context switches: 1089
+	Involuntary context switches: 63
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+TrimmomaticPE: Started with arguments:
+ 27_4C_mbnl_S19_L008.R1.cut.fastq.gz 27_4C_mbnl_S19_L008.R2.cut.fastq.gz 27_4C_mbnl_S19_L008.R1.cut.trim.fastq.gz 27_4C_mbnl_S19_L008.R1.cut.orph.trim.fastq.gz 27_4C_mbnl_S19_L008.R2.cut.trim.fastq.gz 27_4C_mbnl_S19_L008.R2.cut.orph.trim.fastq.gz LEADING:3 TRAILING:3 SLIDINGWINDOW:5:15 MINLEN:35
+Multiple cores found: Using 4 threads
+Quality encoding detected as phred33
+Input Read Pairs: 7226430 Both Surviving: 6876955 (95.16%) Forward Only Surviving: 326783 (4.52%) Reverse Only Surviving: 5492 (0.08%) Dropped: 17200 (0.24%)
+TrimmomaticPE: Completed successfully
+	Command being timed: "trimmomatic PE 27_4C_mbnl_S19_L008.R1.cut.fastq.gz 27_4C_mbnl_S19_L008.R2.cut.fastq.gz 27_4C_mbnl_S19_L008.R1.cut.trim.fastq.gz 27_4C_mbnl_S19_L008.R1.cut.orph.trim.fastq.gz 27_4C_mbnl_S19_L008.R2.cut.trim.fastq.gz 27_4C_mbnl_S19_L008.R2.cut.orph.trim.fastq.gz LEADING:3 TRAILING:3 SLIDINGWINDOW:5:15 MINLEN:35"
+	User time (seconds): 330.48
+	System time (seconds): 5.91
+	Percent of CPU this job got: 209%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 2:40.25
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 394968
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 50117
+	Voluntary context switches: 70075
+	Involuntary context switches: 1399
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 1056
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+application/gzip
+Started analysis of 27_4C_mbnl_S19_L008.R1.cut.trim.fastq.gz
+Approx 5% complete for 27_4C_mbnl_S19_L008.R1.cut.trim.fastq.gz
+Approx 10% complete for 27_4C_mbnl_S19_L008.R1.cut.trim.fastq.gz
+Approx 15% complete for 27_4C_mbnl_S19_L008.R1.cut.trim.fastq.gz
+Approx 20% complete for 27_4C_mbnl_S19_L008.R1.cut.trim.fastq.gz
+Approx 25% complete for 27_4C_mbnl_S19_L008.R1.cut.trim.fastq.gz
+Approx 30% complete for 27_4C_mbnl_S19_L008.R1.cut.trim.fastq.gz
+Approx 35% complete for 27_4C_mbnl_S19_L008.R1.cut.trim.fastq.gz
+Approx 40% complete for 27_4C_mbnl_S19_L008.R1.cut.trim.fastq.gz
+Approx 45% complete for 27_4C_mbnl_S19_L008.R1.cut.trim.fastq.gz
+Approx 50% complete for 27_4C_mbnl_S19_L008.R1.cut.trim.fastq.gz
+Approx 55% complete for 27_4C_mbnl_S19_L008.R1.cut.trim.fastq.gz
+Approx 60% complete for 27_4C_mbnl_S19_L008.R1.cut.trim.fastq.gz
+Approx 65% complete for 27_4C_mbnl_S19_L008.R1.cut.trim.fastq.gz
+Approx 70% complete for 27_4C_mbnl_S19_L008.R1.cut.trim.fastq.gz
+Approx 75% complete for 27_4C_mbnl_S19_L008.R1.cut.trim.fastq.gz
+Approx 80% complete for 27_4C_mbnl_S19_L008.R1.cut.trim.fastq.gz
+Approx 85% complete for 27_4C_mbnl_S19_L008.R1.cut.trim.fastq.gz
+Approx 90% complete for 27_4C_mbnl_S19_L008.R1.cut.trim.fastq.gz
+Approx 95% complete for 27_4C_mbnl_S19_L008.R1.cut.trim.fastq.gz
+Analysis complete for 27_4C_mbnl_S19_L008.R1.cut.trim.fastq.gz
+	Command being timed: "fastqc -o /projects/bgmp/wesg/bioinfo/Bi623/QAA/fqcout_cutntrim --noextract -f fastq 27_4C_mbnl_S19_L008.R1.cut.trim.fastq.gz"
+	User time (seconds): 27.07
+	System time (seconds): 1.35
+	Percent of CPU this job got: 101%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:28.06
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 354188
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 42727
+	Voluntary context switches: 6581
+	Involuntary context switches: 44
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 2448
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+application/gzip
+Started analysis of 27_4C_mbnl_S19_L008.R2.cut.trim.fastq.gz
+Approx 5% complete for 27_4C_mbnl_S19_L008.R2.cut.trim.fastq.gz
+Approx 10% complete for 27_4C_mbnl_S19_L008.R2.cut.trim.fastq.gz
+Approx 15% complete for 27_4C_mbnl_S19_L008.R2.cut.trim.fastq.gz
+Approx 20% complete for 27_4C_mbnl_S19_L008.R2.cut.trim.fastq.gz
+Approx 25% complete for 27_4C_mbnl_S19_L008.R2.cut.trim.fastq.gz
+Approx 30% complete for 27_4C_mbnl_S19_L008.R2.cut.trim.fastq.gz
+Approx 35% complete for 27_4C_mbnl_S19_L008.R2.cut.trim.fastq.gz
+Approx 40% complete for 27_4C_mbnl_S19_L008.R2.cut.trim.fastq.gz
+Approx 45% complete for 27_4C_mbnl_S19_L008.R2.cut.trim.fastq.gz
+Approx 50% complete for 27_4C_mbnl_S19_L008.R2.cut.trim.fastq.gz
+Approx 55% complete for 27_4C_mbnl_S19_L008.R2.cut.trim.fastq.gz
+Approx 60% complete for 27_4C_mbnl_S19_L008.R2.cut.trim.fastq.gz
+Approx 65% complete for 27_4C_mbnl_S19_L008.R2.cut.trim.fastq.gz
+Approx 70% complete for 27_4C_mbnl_S19_L008.R2.cut.trim.fastq.gz
+Approx 75% complete for 27_4C_mbnl_S19_L008.R2.cut.trim.fastq.gz
+Approx 80% complete for 27_4C_mbnl_S19_L008.R2.cut.trim.fastq.gz
+Approx 85% complete for 27_4C_mbnl_S19_L008.R2.cut.trim.fastq.gz
+Approx 90% complete for 27_4C_mbnl_S19_L008.R2.cut.trim.fastq.gz
+Approx 95% complete for 27_4C_mbnl_S19_L008.R2.cut.trim.fastq.gz
+Analysis complete for 27_4C_mbnl_S19_L008.R2.cut.trim.fastq.gz
+	Command being timed: "fastqc -o /projects/bgmp/wesg/bioinfo/Bi623/QAA/fqcout_cutntrim --noextract -f fastq 27_4C_mbnl_S19_L008.R2.cut.trim.fastq.gz"
+	User time (seconds): 27.58
+	System time (seconds): 1.36
+	Percent of CPU this job got: 106%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:27.16
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 341932
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 43042
+	Voluntary context switches: 6326
+	Involuntary context switches: 55
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 2416
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+This is cutadapt 4.9 with Python 3.12.5
+Command line parameters: -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCA -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGT -o 32_4G_both_S23_L008.R1.cut.fastq.gz -p 32_4G_both_S23_L008.R2.cut.fastq.gz /projects/bgmp/shared/2017_sequencing/demultiplexed/32_4G_both_S23_L008_R1_001.fastq.gz /projects/bgmp/shared/2017_sequencing/demultiplexed/32_4G_both_S23_L008_R2_001.fastq.gz
+Processing paired-end reads on 1 core ...
+Finished in 168.058 s (14.218 µs/read; 4.22 M reads/minute).
+
+=== Summary ===
+
+Total read pairs processed:         11,820,174
+  Read 1 with adapter:                 631,720 (5.3%)
+  Read 2 with adapter:                 725,571 (6.1%)
+Pairs written (passing filters):    11,820,174 (100.0%)
+
+Total basepairs processed: 2,387,675,148 bp
+  Read 1: 1,193,837,574 bp
+  Read 2: 1,193,837,574 bp
+Total written (filtered):  2,372,248,908 bp (99.4%)
+  Read 1: 1,186,319,651 bp
+  Read 2: 1,185,929,257 bp
+
+=== First read: Adapter 1 ===
+
+Sequence: AGATCGGAAGAGCACACGTCTGAACTCCAGTCA; Type: regular 3'; Length: 33; Trimmed: 631720 times
+
+Minimum overlap: 3
+No. of allowed errors:
+1-9 bp: 0; 10-19 bp: 1; 20-29 bp: 2; 30-33 bp: 3
+
+Bases preceding removed adapters:
+  A: 18.2%
+  C: 32.1%
+  G: 34.3%
+  T: 14.4%
+  none/other: 1.1%
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+3	228316	184690.2	0	228316
+4	62985	46172.6	0	62985
+5	30175	11543.1	0	30175
+6	20018	2885.8	0	20018
+7	18438	721.4	0	18438
+8	17141	180.4	0	17141
+9	16390	45.1	0	16058 332
+10	15591	11.3	1	14990 601
+11	14537	2.8	1	14071 466
+12	13727	0.7	1	13310 417
+13	13123	0.2	1	12564 559
+14	12246	0.0	1	11626 620
+15	11818	0.0	1	11219 599
+16	10972	0.0	1	10432 540
+17	10153	0.0	1	9586 567
+18	9470	0.0	1	8914 525 31
+19	8793	0.0	1	8266 488 39
+20	8269	0.0	2	7759 440 70
+21	7580	0.0	2	7060 457 63
+22	7231	0.0	2	6749 421 61
+23	6607	0.0	2	6181 367 59
+24	6466	0.0	2	6009 397 60
+25	5769	0.0	2	5376 353 40
+26	5284	0.0	2	4912 327 45
+27	4814	0.0	2	4501 267 42 4
+28	4649	0.0	2	4307 285 50 7
+29	4186	0.0	2	3881 256 41 8
+30	3986	0.0	3	3674 253 47 12
+31	3629	0.0	3	3312 267 40 10
+32	3310	0.0	3	3053 209 35 13
+33	3044	0.0	3	2778 224 24 18
+34	2833	0.0	3	2592 207 28 6
+35	2694	0.0	3	2489 167 29 9
+36	2425	0.0	3	2229 160 30 6
+37	2246	0.0	3	2057 150 33 6
+38	2019	0.0	3	1836 151 30 2
+39	1981	0.0	3	1833 122 21 5
+40	1898	0.0	3	1750 120 26 2
+41	1677	0.0	3	1547 113 13 4
+42	1524	0.0	3	1400 107 14 3
+43	1382	0.0	3	1286 84 8 4
+44	1200	0.0	3	1103 81 11 5
+45	1165	0.0	3	1078 71 13 3
+46	1099	0.0	3	994 84 14 7
+47	985	0.0	3	916 62 6 1
+48	916	0.0	3	847 57 8 4
+49	884	0.0	3	810 54 17 3
+50	819	0.0	3	765 49 4 1
+51	763	0.0	3	696 55 10 2
+52	678	0.0	3	611 59 6 2
+53	651	0.0	3	602 41 6 2
+54	568	0.0	3	531 28 7 2
+55	526	0.0	3	498 24 2 2
+56	441	0.0	3	417 17 6 1
+57	417	0.0	3	378 32 5 2
+58	409	0.0	3	381 20 6 2
+59	391	0.0	3	354 35 1 1
+60	337	0.0	3	308 24 4 1
+61	338	0.0	3	311 23 4
+62	304	0.0	3	288 12 3 1
+63	255	0.0	3	233 19 3
+64	238	0.0	3	225 10 2 1
+65	212	0.0	3	199 12 1
+66	207	0.0	3	190 16 0 1
+67	156	0.0	3	143 11 1 1
+68	135	0.0	3	126 9
+69	139	0.0	3	132 5 2
+70	142	0.0	3	129 12 1
+71	118	0.0	3	111 7
+72	107	0.0	3	95 9 3
+73	110	0.0	3	97 8 2 3
+74	63	0.0	3	59 1 2 1
+75	42	0.0	3	37 3 2
+76	44	0.0	3	39 3 2
+77	32	0.0	3	27 4 1
+78	30	0.0	3	25 4 1
+79	24	0.0	3	21 2 0 1
+80	16	0.0	3	15 1
+81	9	0.0	3	8 1
+82	11	0.0	3	8 2 1
+83	28	0.0	3	22 6
+84	17	0.0	3	13 4
+85	24	0.0	3	19 4 1
+86	16	0.0	3	13 2 0 1
+87	16	0.0	3	16
+88	14	0.0	3	14
+89	20	0.0	3	20
+90	10	0.0	3	10
+91	13	0.0	3	12 1
+92	8	0.0	3	7 1
+93	7	0.0	3	6 1
+94	3	0.0	3	3
+95	9	0.0	3	6 3
+96	12	0.0	3	12
+97	8	0.0	3	7 1
+98	5	0.0	3	5
+99	8	0.0	3	6 1 1
+100	2	0.0	3	2
+101	7123	0.0	3	9 6312 728 74
+
+
+=== Second read: Adapter 2 ===
+
+Sequence: AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGT; Type: regular 3'; Length: 33; Trimmed: 725571 times
+
+Minimum overlap: 3
+No. of allowed errors:
+1-9 bp: 0; 10-19 bp: 1; 20-29 bp: 2; 30-33 bp: 3
+
+Bases preceding removed adapters:
+  A: 21.3%
+  C: 32.2%
+  G: 36.9%
+  T: 8.6%
+  none/other: 1.0%
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+3	302572	184690.2	0	302572
+4	74177	46172.6	0	74177
+5	33429	11543.1	0	33429
+6	21404	2885.8	0	21404
+7	18680	721.4	0	18680
+8	17248	180.4	0	17248
+9	16671	45.1	0	16184 487
+10	15935	11.3	1	15131 804
+11	14806	2.8	1	14237 569
+12	13881	0.7	1	13540 341
+13	13201	0.2	1	12896 305
+14	12326	0.0	1	12041 285
+15	11895	0.0	1	11523 372
+16	11071	0.0	1	10745 326
+17	10275	0.0	1	9978 297
+18	9495	0.0	1	9114 377 4
+19	8876	0.0	1	8566 305 5
+20	8319	0.0	2	8021 266 32
+21	7634	0.0	2	7330 276 28
+22	7281	0.0	2	6998 246 37
+23	6684	0.0	2	6411 241 32
+24	6516	0.0	2	6216 258 42
+25	5815	0.0	2	5529 250 36
+26	5322	0.0	2	5058 211 53
+27	4865	0.0	2	4628 197 40
+28	4700	0.0	2	4462 208 29 1
+29	4230	0.0	2	3989 194 40 7
+30	4015	0.0	3	3793 172 36 14
+31	3663	0.0	3	3398 220 31 14
+32	3356	0.0	3	3144 168 33 11
+33	3082	0.0	3	2903 144 26 9
+34	2883	0.0	3	2694 148 26 15
+35	2733	0.0	3	2573 126 26 8
+36	2455	0.0	3	2330 93 22 10
+37	2278	0.0	3	2148 105 15 10
+38	2060	0.0	3	1933 99 16 12
+39	2007	0.0	3	1888 93 18 8
+40	1925	0.0	3	1804 85 22 14
+41	1710	0.0	3	1612 72 14 12
+42	1554	0.0	3	1470 62 8 14
+43	1407	0.0	3	1323 63 11 10
+44	1229	0.0	3	1143 67 10 9
+45	1198	0.0	3	1122 56 10 10
+46	1132	0.0	3	1057 52 13 10
+47	1012	0.0	3	949 47 7 9
+48	951	0.0	3	873 62 7 9
+49	918	0.0	3	849 52 9 8
+50	852	0.0	3	783 52 7 10
+51	801	0.0	3	730 48 11 12
+52	709	0.0	3	650 37 14 8
+53	665	0.0	3	616 41 4 4
+54	592	0.0	3	555 28 6 3
+55	562	0.0	3	510 30 15 7
+56	459	0.0	3	423 24 7 5
+57	445	0.0	3	411 18 9 7
+58	437	0.0	3	397 24 9 7
+59	414	0.0	3	384 18 8 4
+60	354	0.0	3	333 13 4 4
+61	350	0.0	3	327 18 4 1
+62	333	0.0	3	296 28 5 4
+63	277	0.0	3	249 16 7 5
+64	258	0.0	3	233 13 8 4
+65	236	0.0	3	212 14 8 2
+66	236	0.0	3	206 14 9 7
+67	179	0.0	3	158 11 8 2
+68	150	0.0	3	134 10 4 2
+69	164	0.0	3	142 12 5 5
+70	168	0.0	3	139 18 5 6
+71	137	0.0	3	120 9 5 3
+72	123	0.0	3	106 11 3 3
+73	128	0.0	3	109 9 5 5
+74	75	0.0	3	63 5 5 2
+75	60	0.0	3	47 3 3 7
+76	58	0.0	3	45 11 0 2
+77	39	0.0	3	32 4 0 3
+78	38	0.0	3	33 3 1 1
+79	35	0.0	3	32 1 1 1
+80	22	0.0	3	18 4
+81	13	0.0	3	10 0 1 2
+82	11	0.0	3	9 2
+83	33	0.0	3	27 2 1 3
+84	20	0.0	3	17 1 2
+85	28	0.0	3	24 1 1 2
+86	15	0.0	3	15
+87	21	0.0	3	16 2 1 2
+88	16	0.0	3	13 1 1 1
+89	21	0.0	3	20 0 0 1
+90	12	0.0	3	9 2 1
+91	14	0.0	3	10 3 0 1
+92	9	0.0	3	6 2 0 1
+93	8	0.0	3	7 0 0 1
+94	4	0.0	3	2 1 0 1
+95	11	0.0	3	7 2 1 1
+96	14	0.0	3	9 2 1 2
+97	9	0.0	3	7 1 0 1
+98	7	0.0	3	4 0 3
+99	9	0.0	3	5 2 0 2
+100	3	0.0	3	0 1 1 1
+101	7061	0.0	3	6 6396 607 52
+	Command being timed: "cutadapt -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCA -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGT -o 32_4G_both_S23_L008.R1.cut.fastq.gz -p 32_4G_both_S23_L008.R2.cut.fastq.gz /projects/bgmp/shared/2017_sequencing/demultiplexed/32_4G_both_S23_L008_R1_001.fastq.gz /projects/bgmp/shared/2017_sequencing/demultiplexed/32_4G_both_S23_L008_R2_001.fastq.gz"
+	User time (seconds): 166.33
+	System time (seconds): 1.31
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 2:48.15
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 38196
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 7055
+	Voluntary context switches: 561
+	Involuntary context switches: 96
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+TrimmomaticPE: Started with arguments:
+ 32_4G_both_S23_L008.R1.cut.fastq.gz 32_4G_both_S23_L008.R2.cut.fastq.gz 32_4G_both_S23_L008.R1.cut.trim.fastq.gz 32_4G_both_S23_L008.R1.cut.orph.trim.fastq.gz 32_4G_both_S23_L008.R2.cut.trim.fastq.gz 32_4G_both_S23_L008.R2.cut.orph.trim.fastq.gz LEADING:3 TRAILING:3 SLIDINGWINDOW:5:15 MINLEN:35
+Multiple cores found: Using 4 threads
+Quality encoding detected as phred33
+Input Read Pairs: 11820174 Both Surviving: 11468966 (97.03%) Forward Only Surviving: 331322 (2.80%) Reverse Only Surviving: 8148 (0.07%) Dropped: 11738 (0.10%)
+TrimmomaticPE: Completed successfully
+	Command being timed: "trimmomatic PE 32_4G_both_S23_L008.R1.cut.fastq.gz 32_4G_both_S23_L008.R2.cut.fastq.gz 32_4G_both_S23_L008.R1.cut.trim.fastq.gz 32_4G_both_S23_L008.R1.cut.orph.trim.fastq.gz 32_4G_both_S23_L008.R2.cut.trim.fastq.gz 32_4G_both_S23_L008.R2.cut.orph.trim.fastq.gz LEADING:3 TRAILING:3 SLIDINGWINDOW:5:15 MINLEN:35"
+	User time (seconds): 540.74
+	System time (seconds): 9.72
+	Percent of CPU this job got: 210%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 4:21.47
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 396848
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 55182
+	Voluntary context switches: 114622
+	Involuntary context switches: 1955
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 1696
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+application/gzip
+Started analysis of 32_4G_both_S23_L008.R1.cut.trim.fastq.gz
+Approx 5% complete for 32_4G_both_S23_L008.R1.cut.trim.fastq.gz
+Approx 10% complete for 32_4G_both_S23_L008.R1.cut.trim.fastq.gz
+Approx 15% complete for 32_4G_both_S23_L008.R1.cut.trim.fastq.gz
+Approx 20% complete for 32_4G_both_S23_L008.R1.cut.trim.fastq.gz
+Approx 25% complete for 32_4G_both_S23_L008.R1.cut.trim.fastq.gz
+Approx 30% complete for 32_4G_both_S23_L008.R1.cut.trim.fastq.gz
+Approx 35% complete for 32_4G_both_S23_L008.R1.cut.trim.fastq.gz
+Approx 40% complete for 32_4G_both_S23_L008.R1.cut.trim.fastq.gz
+Approx 45% complete for 32_4G_both_S23_L008.R1.cut.trim.fastq.gz
+Approx 50% complete for 32_4G_both_S23_L008.R1.cut.trim.fastq.gz
+Approx 55% complete for 32_4G_both_S23_L008.R1.cut.trim.fastq.gz
+Approx 60% complete for 32_4G_both_S23_L008.R1.cut.trim.fastq.gz
+Approx 65% complete for 32_4G_both_S23_L008.R1.cut.trim.fastq.gz
+Approx 70% complete for 32_4G_both_S23_L008.R1.cut.trim.fastq.gz
+Approx 75% complete for 32_4G_both_S23_L008.R1.cut.trim.fastq.gz
+Approx 80% complete for 32_4G_both_S23_L008.R1.cut.trim.fastq.gz
+Approx 85% complete for 32_4G_both_S23_L008.R1.cut.trim.fastq.gz
+Approx 90% complete for 32_4G_both_S23_L008.R1.cut.trim.fastq.gz
+Approx 95% complete for 32_4G_both_S23_L008.R1.cut.trim.fastq.gz
+Analysis complete for 32_4G_both_S23_L008.R1.cut.trim.fastq.gz
+	Command being timed: "fastqc -o /projects/bgmp/wesg/bioinfo/Bi623/QAA/fqcout_cutntrim --noextract -f fastq 32_4G_both_S23_L008.R1.cut.trim.fastq.gz"
+	User time (seconds): 42.17
+	System time (seconds): 2.06
+	Percent of CPU this job got: 102%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:43.35
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 374892
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 56046
+	Voluntary context switches: 8299
+	Involuntary context switches: 59
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 2496
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+application/gzip
+Started analysis of 32_4G_both_S23_L008.R2.cut.trim.fastq.gz
+Approx 5% complete for 32_4G_both_S23_L008.R2.cut.trim.fastq.gz
+Approx 10% complete for 32_4G_both_S23_L008.R2.cut.trim.fastq.gz
+Approx 15% complete for 32_4G_both_S23_L008.R2.cut.trim.fastq.gz
+Approx 20% complete for 32_4G_both_S23_L008.R2.cut.trim.fastq.gz
+Approx 25% complete for 32_4G_both_S23_L008.R2.cut.trim.fastq.gz
+Approx 30% complete for 32_4G_both_S23_L008.R2.cut.trim.fastq.gz
+Approx 35% complete for 32_4G_both_S23_L008.R2.cut.trim.fastq.gz
+Approx 40% complete for 32_4G_both_S23_L008.R2.cut.trim.fastq.gz
+Approx 45% complete for 32_4G_both_S23_L008.R2.cut.trim.fastq.gz
+Approx 50% complete for 32_4G_both_S23_L008.R2.cut.trim.fastq.gz
+Approx 55% complete for 32_4G_both_S23_L008.R2.cut.trim.fastq.gz
+Approx 60% complete for 32_4G_both_S23_L008.R2.cut.trim.fastq.gz
+Approx 65% complete for 32_4G_both_S23_L008.R2.cut.trim.fastq.gz
+Approx 70% complete for 32_4G_both_S23_L008.R2.cut.trim.fastq.gz
+Approx 75% complete for 32_4G_both_S23_L008.R2.cut.trim.fastq.gz
+Approx 80% complete for 32_4G_both_S23_L008.R2.cut.trim.fastq.gz
+Approx 85% complete for 32_4G_both_S23_L008.R2.cut.trim.fastq.gz
+Approx 90% complete for 32_4G_both_S23_L008.R2.cut.trim.fastq.gz
+Approx 95% complete for 32_4G_both_S23_L008.R2.cut.trim.fastq.gz
+Analysis complete for 32_4G_both_S23_L008.R2.cut.trim.fastq.gz
+	Command being timed: "fastqc -o /projects/bgmp/wesg/bioinfo/Bi623/QAA/fqcout_cutntrim --noextract -f fastq 32_4G_both_S23_L008.R2.cut.trim.fastq.gz"
+	User time (seconds): 43.39
+	System time (seconds): 2.29
+	Percent of CPU this job got: 101%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:45.16
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 352592
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 49156
+	Voluntary context switches: 8629
+	Involuntary context switches: 47
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 2528
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+# packages in environment at /projects/bgmp/wesg/miniforge3/envs/bgmp_py.mplib:
+#
+# Name                    Version                   Build  Channel
+_libgcc_mutex             0.1                 conda_forge    conda-forge
+_openmp_mutex             4.5                       2_gnu    conda-forge
+alsa-lib                  1.2.12               h4ab18f5_0    conda-forge
+attr                      2.5.1                h166bdaf_1    conda-forge
+brotli                    1.1.0                hd590300_1    conda-forge
+brotli-bin                1.1.0                hd590300_1    conda-forge
+bzip2                     1.0.8                hd590300_5    conda-forge
+ca-certificates           2024.7.4             hbcca054_0    conda-forge
+cairo                     1.18.0               hbb29018_2    conda-forge
+certifi                   2024.7.4           pyhd8ed1ab_0    conda-forge
+contourpy                 1.2.1           py312h8572e83_0    conda-forge
+cycler                    0.12.1             pyhd8ed1ab_0    conda-forge
+dbus                      1.13.6               h5008d03_3    conda-forge
+expat                     2.6.2                h59595ed_0    conda-forge
+font-ttf-dejavu-sans-mono 2.37                 hab24e00_0    conda-forge
+font-ttf-inconsolata      3.000                h77eed37_0    conda-forge
+font-ttf-source-code-pro  2.038                h77eed37_0    conda-forge
+font-ttf-ubuntu           0.83                 h77eed37_2    conda-forge
+fontconfig                2.14.2               h14ed4e7_0    conda-forge
+fonts-conda-ecosystem     1                             0    conda-forge
+fonts-conda-forge         1                             0    conda-forge
+fonttools                 4.53.1          py312h41a817b_0    conda-forge
+freetype                  2.12.1               h267a509_2    conda-forge
+gettext                   0.22.5               h59595ed_2    conda-forge
+gettext-tools             0.22.5               h59595ed_2    conda-forge
+glib                      2.80.3               h8a4344b_1    conda-forge
+glib-tools                2.80.3               h73ef956_1    conda-forge
+graphite2                 1.3.13            h59595ed_1003    conda-forge
+gst-plugins-base          1.24.5               hbaaba92_0    conda-forge
+gstreamer                 1.24.5               haf2f30d_0    conda-forge
+harfbuzz                  9.0.0                hfac3d4d_0    conda-forge
+icu                       73.2                 h59595ed_0    conda-forge
+keyutils                  1.6.1                h166bdaf_0    conda-forge
+kiwisolver                1.4.5           py312h8572e83_1    conda-forge
+krb5                      1.21.3               h659f571_0    conda-forge
+lame                      3.100             h166bdaf_1003    conda-forge
+lcms2                     2.16                 hb7c19ff_0    conda-forge
+ld_impl_linux-64          2.40                 hf3520f5_7    conda-forge
+lerc                      4.0.0                h27087fc_0    conda-forge
+libasprintf               0.22.5               h661eb56_2    conda-forge
+libasprintf-devel         0.22.5               h661eb56_2    conda-forge
+libblas                   3.9.0           23_linux64_openblas    conda-forge
+libbrotlicommon           1.1.0                hd590300_1    conda-forge
+libbrotlidec              1.1.0                hd590300_1    conda-forge
+libbrotlienc              1.1.0                hd590300_1    conda-forge
+libcap                    2.69                 h0f662aa_0    conda-forge
+libcblas                  3.9.0           23_linux64_openblas    conda-forge
+libclang-cpp15            15.0.7          default_h127d8a8_5    conda-forge
+libclang13                18.1.8          default_h9def88c_1    conda-forge
+libcups                   2.3.3                h4637d8d_4    conda-forge
+libdeflate                1.20                 hd590300_0    conda-forge
+libedit                   3.1.20191231         he28a2e2_2    conda-forge
+libevent                  2.1.12               hf998b51_1    conda-forge
+libexpat                  2.6.2                h59595ed_0    conda-forge
+libffi                    3.4.2                h7f98852_5    conda-forge
+libflac                   1.4.3                h59595ed_0    conda-forge
+libgcc-ng                 14.1.0               h77fa898_0    conda-forge
+libgcrypt                 1.11.0               h4ab18f5_1    conda-forge
+libgettextpo              0.22.5               h59595ed_2    conda-forge
+libgettextpo-devel        0.22.5               h59595ed_2    conda-forge
+libgfortran-ng            14.1.0               h69a702a_0    conda-forge
+libgfortran5              14.1.0               hc5f4f2c_0    conda-forge
+libglib                   2.80.3               h8a4344b_1    conda-forge
+libgomp                   14.1.0               h77fa898_0    conda-forge
+libgpg-error              1.50                 h4f305b6_0    conda-forge
+libiconv                  1.17                 hd590300_2    conda-forge
+libjpeg-turbo             3.0.0                hd590300_1    conda-forge
+liblapack                 3.9.0           23_linux64_openblas    conda-forge
+libllvm15                 15.0.7               hb3ce162_4    conda-forge
+libllvm18                 18.1.8               h8b73ec9_1    conda-forge
+libnsl                    2.0.1                hd590300_0    conda-forge
+libogg                    1.3.5                h4ab18f5_0    conda-forge
+libopenblas               0.3.27          pthreads_hac2b453_1    conda-forge
+libopus                   1.3.1                h7f98852_1    conda-forge
+libpng                    1.6.43               h2797004_0    conda-forge
+libpq                     16.3                 ha72fbe1_0    conda-forge
+libsndfile                1.2.2                hc60ed4a_1    conda-forge
+libsqlite                 3.46.0               hde9e2c9_0    conda-forge
+libstdcxx-ng              14.1.0               hc0a3c3a_0    conda-forge
+libsystemd0               255                  h3516f8a_1    conda-forge
+libtiff                   4.6.0                h1dd3fc0_3    conda-forge
+libuuid                   2.38.1               h0b41bf4_0    conda-forge
+libvorbis                 1.3.7                h9c3ff4c_0    conda-forge
+libwebp-base              1.4.0                hd590300_0    conda-forge
+libxcb                    1.16                 hd590300_0    conda-forge
+libxcrypt                 4.4.36               hd590300_1    conda-forge
+libxkbcommon              1.7.0                h2c5496b_1    conda-forge
+libxml2                   2.12.7               h4c95cb1_3    conda-forge
+libzlib                   1.3.1                h4ab18f5_1    conda-forge
+lz4-c                     1.9.4                hcb278e6_0    conda-forge
+matplotlib                3.9.1           py312h7900ff3_0    conda-forge
+matplotlib-base           3.9.1           py312h9201f00_0    conda-forge
+mpg123                    1.32.6               h59595ed_0    conda-forge
+munkres                   1.1.4              pyh9f0ad1d_0    conda-forge
+mysql-common              8.3.0                h70512c7_5    conda-forge
+mysql-libs                8.3.0                ha479ceb_5    conda-forge
+ncurses                   6.5                  h59595ed_0    conda-forge
+nspr                      4.35                 h27087fc_0    conda-forge
+nss                       3.102                h593d115_0    conda-forge
+numpy                     2.0.1           py312h1103770_0    conda-forge
+openjpeg                  2.5.2                h488ebb8_0    conda-forge
+openssl                   3.3.1                h4bc722e_2    conda-forge
+packaging                 24.1               pyhd8ed1ab_0    conda-forge
+pcre2                     10.44                h0f59acf_0    conda-forge
+pillow                    10.4.0          py312h287a98d_0    conda-forge
+pip                       24.0               pyhd8ed1ab_0    conda-forge
+pixman                    0.43.2               h59595ed_0    conda-forge
+ply                       3.11               pyhd8ed1ab_2    conda-forge
+pthread-stubs             0.4               h36c2ea0_1001    conda-forge
+pulseaudio-client         17.0                 hb77b528_0    conda-forge
+pyparsing                 3.1.2              pyhd8ed1ab_0    conda-forge
+pyqt                      5.15.9          py312h949fe66_5    conda-forge
+pyqt5-sip                 12.12.2         py312h30efb56_5    conda-forge
+python                    3.12.4          h194c7f8_0_cpython    conda-forge
+python-dateutil           2.9.0              pyhd8ed1ab_0    conda-forge
+python_abi                3.12                    4_cp312    conda-forge
+qhull                     2020.2               h434a139_5    conda-forge
+qt-main                   5.15.8              h320f8da_24    conda-forge
+readline                  8.2                  h8228510_1    conda-forge
+setuptools                70.1.1             pyhd8ed1ab_0    conda-forge
+sip                       6.7.12          py312h30efb56_0    conda-forge
+six                       1.16.0             pyh6c4a22f_0    conda-forge
+tk                        8.6.13          noxft_h4845f30_101    conda-forge
+toml                      0.10.2             pyhd8ed1ab_0    conda-forge
+tomli                     2.0.1              pyhd8ed1ab_0    conda-forge
+tornado                   6.4.1           py312h9a8786e_0    conda-forge
+tzdata                    2024a                h0c530f3_0    conda-forge
+wheel                     0.43.0             pyhd8ed1ab_1    conda-forge
+xcb-util                  0.4.1                hb711507_2    conda-forge
+xcb-util-image            0.4.0                hb711507_2    conda-forge
+xcb-util-keysyms          0.4.1                hb711507_0    conda-forge
+xcb-util-renderutil       0.3.10               hb711507_0    conda-forge
+xcb-util-wm               0.4.2                hb711507_0    conda-forge
+xkeyboard-config          2.42                 h4ab18f5_0    conda-forge
+xorg-kbproto              1.0.7             h7f98852_1002    conda-forge
+xorg-libice               1.1.1                hd590300_0    conda-forge
+xorg-libsm                1.2.4                h7391055_0    conda-forge
+xorg-libx11               1.8.9                hb711507_1    conda-forge
+xorg-libxau               1.0.11               hd590300_0    conda-forge
+xorg-libxdmcp             1.1.3                h7f98852_0    conda-forge
+xorg-libxext              1.3.4                h0b41bf4_2    conda-forge
+xorg-libxrender           0.9.11               hd590300_0    conda-forge
+xorg-renderproto          0.11.1            h7f98852_1002    conda-forge
+xorg-xextproto            7.3.0             h0b41bf4_1003    conda-forge
+xorg-xf86vidmodeproto     2.3.1             h7f98852_1002    conda-forge
+xorg-xproto               7.0.31            h7f98852_1007    conda-forge
+xz                        5.2.6                h166bdaf_0    conda-forge
+zlib                      1.3.1                h4ab18f5_1    conda-forge
+zstd                      1.5.6                ha6fb4c9_0    conda-forge
+plotting R1
+[[     35     927]
+ [     36    1045]
+ [     37    1159]
+ [     38    1224]
+ [     39    1372]
+ [     40    1564]
+ [     41    1577]
+ [     42    1633]
+ [     43    1802]
+ [     44    1817]
+ [     45    2006]
+ [     46    2271]
+ [     47    2486]
+ [     48    2695]
+ [     49    2997]
+ [     50    3393]
+ [     51    3663]
+ [     52    4058]
+ [     53    4182]
+ [     54    4714]
+ [     55    4946]
+ [     56    5497]
+ [     57    6089]
+ [     58    6763]
+ [     59    7156]
+ [     60    7702]
+ [     61    8231]
+ [     62    8721]
+ [     63    9332]
+ [     64    9770]
+ [     65   10033]
+ [     66   10367]
+ [     67   10930]
+ [     68   11394]
+ [     69   11982]
+ [     70   12402]
+ [     71   12960]
+ [     72   13192]
+ [     73   13960]
+ [     74   14024]
+ [     75   14451]
+ [     76   14878]
+ [     77   15274]
+ [     78   15334]
+ [     79   15907]
+ [     80   15735]
+ [     81   15964]
+ [     82   16391]
+ [     83   16801]
+ [     84   17102]
+ [     85   17200]
+ [     86   17679]
+ [     87   17671]
+ [     88   17800]
+ [     89   18130]
+ [     90   18517]
+ [     91   19436]
+ [     92   18737]
+ [     93   18914]
+ [     94   19169]
+ [     95   20506]
+ [     96   25860]
+ [     97   45188]
+ [     98  135466]
+ [     99   20123]
+ [    100  172900]
+ [    101 5873786]]
+plotting R2
+[[     35   12139]
+ [     36   11266]
+ [     37    9750]
+ [     38    8406]
+ [     39    6681]
+ [     40    6528]
+ [     41    5763]
+ [     42    5539]
+ [     43    5233]
+ [     44    5174]
+ [     45    5220]
+ [     46    5315]
+ [     47    5496]
+ [     48    5781]
+ [     49    5980]
+ [     50    6360]
+ [     51    6484]
+ [     52    6866]
+ [     53    7298]
+ [     54    7535]
+ [     55    8023]
+ [     56    8527]
+ [     57    9057]
+ [     58    9774]
+ [     59   10499]
+ [     60   10992]
+ [     61   11701]
+ [     62   11967]
+ [     63   12773]
+ [     64   13059]
+ [     65   13303]
+ [     66   13592]
+ [     67   14116]
+ [     68   14502]
+ [     69   14927]
+ [     70   15533]
+ [     71   15999]
+ [     72   16252]
+ [     73   16619]
+ [     74   16606]
+ [     75   16986]
+ [     76   17061]
+ [     77   17941]
+ [     78   17265]
+ [     79   17944]
+ [     80   17785]
+ [     81   17917]
+ [     82   18362]
+ [     83   18970]
+ [     84   19117]
+ [     85   19238]
+ [     86   19470]
+ [     87   19546]
+ [     88   19799]
+ [     89   20136]
+ [     90   20383]
+ [     91   21329]
+ [     92   20769]
+ [     93   20826]
+ [     94   21370]
+ [     95   23291]
+ [     96   29528]
+ [     97   55954]
+ [     98  176338]
+ [     99   46774]
+ [    100  341994]
+ [    101 5424227]]
+	Command being timed: "./pairedreadlengthdist.py -i 27_4C_mbnl_S19_L008.R1.cut.trim.fastq.gz -p 27_4C_mbnl_S19_L008.R2.cut.trim.fastq.gz -o 27_4C_mbnl_S19_L008.Rlendist.png"
+	User time (seconds): 25.72
+	System time (seconds): 0.48
+	Percent of CPU this job got: 90%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:29.02
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 72876
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 30002
+	Voluntary context switches: 2257
+	Involuntary context switches: 24
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+plotting R1
+[[      35      937]
+ [      36      980]
+ [      37     1001]
+ [      38     1052]
+ [      39     1106]
+ [      40     1195]
+ [      41     1150]
+ [      42     1237]
+ [      43     1286]
+ [      44     1295]
+ [      45     1304]
+ [      46     1479]
+ [      47     1491]
+ [      48     1545]
+ [      49     1529]
+ [      50     1678]
+ [      51     1689]
+ [      52     1798]
+ [      53     1892]
+ [      54     2015]
+ [      55     2058]
+ [      56     2181]
+ [      57     2219]
+ [      58     2442]
+ [      59     2636]
+ [      60     2824]
+ [      61     3022]
+ [      62     3170]
+ [      63     3116]
+ [      64     3492]
+ [      65     3667]
+ [      66     4052]
+ [      67     4198]
+ [      68     4433]
+ [      69     4855]
+ [      70     5264]
+ [      71     5685]
+ [      72     6132]
+ [      73     6621]
+ [      74     6955]
+ [      75     7273]
+ [      76     7787]
+ [      77     8781]
+ [      78     9022]
+ [      79     9792]
+ [      80     9840]
+ [      81    10830]
+ [      82    11200]
+ [      83    12031]
+ [      84    12807]
+ [      85    13745]
+ [      86    14942]
+ [      87    15328]
+ [      88    16341]
+ [      89    17138]
+ [      90    18227]
+ [      91    19592]
+ [      92    20372]
+ [      93    21366]
+ [      94    22646]
+ [      95    24663]
+ [      96    35048]
+ [      97    69755]
+ [      98   226085]
+ [      99    34054]
+ [     100   299637]
+ [     101 10393983]]
+plotting R2
+[[     35    9898]
+ [     36    9043]
+ [     37    8219]
+ [     38    7353]
+ [     39    6384]
+ [     40    6172]
+ [     41    5421]
+ [     42    5238]
+ [     43    5037]
+ [     44    4995]
+ [     45    4869]
+ [     46    4893]
+ [     47    4971]
+ [     48    4912]
+ [     49    4961]
+ [     50    4874]
+ [     51    5152]
+ [     52    5086]
+ [     53    5412]
+ [     54    5461]
+ [     55    5516]
+ [     56    5810]
+ [     57    5799]
+ [     58    6150]
+ [     59    6518]
+ [     60    6639]
+ [     61    6978]
+ [     62    7030]
+ [     63    7129]
+ [     64    7351]
+ [     65    7451]
+ [     66    7688]
+ [     67    8043]
+ [     68    8045]
+ [     69    8402]
+ [     70    8855]
+ [     71    9225]
+ [     72    9441]
+ [     73    9670]
+ [     74    9784]
+ [     75   10110]
+ [     76   10401]
+ [     77   11774]
+ [     78   11357]
+ [     79   11829]
+ [     80   12159]
+ [     81   12719]
+ [     82   13335]
+ [     83   14124]
+ [     84   14866]
+ [     85   15752]
+ [     86   16698]
+ [     87   17198]
+ [     88   18231]
+ [     89   18843]
+ [     90   20029]
+ [     91   21245]
+ [     92   22094]
+ [     93   22973]
+ [     94   24580]
+ [     95   27584]
+ [     96   40564]
+ [     97   85185]
+ [     98  301060]
+ [     99   63502]
+ [    100  520935]
+ [    101 9839944]]
+	Command being timed: "./pairedreadlengthdist.py -i 32_4G_both_S23_L008.R1.cut.trim.fastq.gz -p 32_4G_both_S23_L008.R2.cut.trim.fastq.gz -o 32_4G_both_S23_L008.Rlendist.png"
+	User time (seconds): 41.96
+	System time (seconds): 0.69
+	Percent of CPU this job got: 100%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:42.46
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 67044
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 34910
+	Voluntary context switches: 559
+	Involuntary context switches: 41
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
