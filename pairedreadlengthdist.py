@@ -1,6 +1,9 @@
 #!/usr/bin/env python
 
 import argparse
+import numpy as np
+import matplotlib.pyplot as plt # type: ignore (thanks vs code)
+import gzip
 
 def get_args():
     parser = argparse.ArgumentParser(description="")
@@ -13,48 +16,79 @@ READ1 = get_args().input
 READ2 = get_args().paired
 OUTPUT = get_args().output
 
+r1_lengthdist = dict()
+r2_lengthdist = dict()
+
+if READ1.endswith(".gz"): 
+    compressed = True
+
+    with gzip.open(READ1, 'r') as r1: # need to use gzip to open file
+        for i, line in enumerate(r1):
+
+            if (i + 1) % 4 == 2: # if it is sequence line
+                # make sure to not include '\n' when counting read lengths
+                lenread = len(line.strip('\n')) 
+
+                if lenread not in r1_lengthdist.keys(): 
+                    # add to dictionary, default value 1 (this is the first occurance)
+                    r1_lengthdist.setdefault(lenread, 1)
+                elif lenread in r1_lengthdist.keys(): 
+                    r1_lengthdist[lenread] += 1
+
+else: 
+    compressed = False
+    
+    with open(READ1, 'r') as r1:
+        for i, line in enumerate(r1):
+            if (i + 1) % 4 == 2: # if it is sequence line
+                lenread = len(line.strip('\n')) # make sure to not include '\n' when counting read lengths
+                if lenread not in r1_lengthdist.keys(): 
+                    # add to dictionary, default value 1 (this is the first occurance)
+                    r1_lengthdist.setdefault(lenread, 1)
+                elif lenread in r1_lengthdist.keys(): 
+                    r1_lengthdist[lenread] += 1
+
 if READ2 == None: 
     paired = False
-
-    if READ1.endswith(".gz"): 
-        compressed = True
-
-        # need to use gzopen or something
-        
-    else: 
-        compressed = False
-
-        r1_lengthdist = dict()
-        with open(READ1, 'r') as r1:
-            for i, line in enumerate(r1):
-                if (i + 1) % 2 ==0: # if it is sequence line
-                    lenread = len(line.strip('\n')) # make sure to not include '\n' when counting read lengths
-                    if lenread in r1_lengthdist
-
-
-
 
 else:
     paired = True
 
+    if READ2.endswith(".gz"): 
+        r2compressed = True
+    
+        with gzip.open(READ2, 'r') as r2: # need to use gzip to open file
+            for i, line in enumerate(r2):
+    
+                if (i + 1) % 4 == 2:
+                    lenread = len(line.strip('\n')) 
+    
+                    if lenread not in r2_lengthdist.keys(): 
+                        r2_lengthdist.setdefault(lenread, 1)
+                    elif lenread in r2_lengthdist.keys(): 
+                        r2_lengthdist[lenread] += 1
+    
+    else:
+        r2compressed = False 
 
-print(paired) 
+        with open(READ2, 'r') as r2:
+            for i, line in enumerate(r2):
+    
+                if (i + 1) % 4 == 2:
+                    lenread = len(line.strip('\n')) 
+    
+                    if lenread not in r2_lengthdist.keys(): 
+                        r2_lengthdist.setdefault(lenread, 1)
+                    elif lenread in r2_lengthdist.keys(): 
+                        r2_lengthdist[lenread] += 1
 
-# 
-# Loop through first file 
-    # only on sequence lines: get line length
-    # create dictionary: keys: length values, number of occurances
-    # if length not in dic
-        # add key to dict, default value = 1 
-    # if length is dic
-        # inc key value
-# 
-# if second file exists
-    # do this again, but for the second file now
-# 
-# turn these dictionaries into numpy arrays 
-# Command to use for this: 
-# np_ar_results = np.array(list(my_dictionary.items()))
-# 
+# First column is read length second column is count of reads of that particular length
+npar_r1_len_dist = np.array(list(r1_lengthdist.items()))
+print(npar_r1_len_dist)
+
+if paired:
+    npar_r2_len_dist = np.array(list(r2_lengthdist.items()))
+    print(npar_r2_len_dist)
+
 # plot output with matplotlib 
     # plot first file, if second exists, plot it on the same exact axes. 
