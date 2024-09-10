@@ -515,9 +515,13 @@ conda list
 ```
 
 <details>   
+
 <summary> `conda list -n QAA` </summary> 
+
 <br> 
+
 ```
+
 $ conda list
 # packages in environment at /projects/bgmp/wesg/miniforge3/envs/QAA:
 #
@@ -687,7 +691,9 @@ zlib                      1.3.1                h4ab18f5_1    conda-forge
 zlib-ng                   2.2.1                he02047a_0    conda-forge
 zstandard                 0.23.0          py312hef9b889_1    conda-forge
 zstd                      1.5.6                ha6fb4c9_0    conda-forge
+
 ```
+
 </details> 
 
 ```
@@ -719,6 +725,7 @@ Ensure the script is looking at the bitwise flag to determine primary or seconda
 
 <br>
 
+```
 usage: htseq-count [-h] [--version] [-f {sam,bam,auto}] [-r {pos,name}] [--max-reads-in-buffer MAX_BUFFER_SIZE] [-s {yes,no,reverse}] [-a MINAQUAL] [-t FEATURE_TYPE]
                    [-i IDATTR] [--additional-attr ADDITIONAL_ATTRIBUTES] [--add-chromosome-info] [-m {union,intersection-strict,intersection-nonempty}]
                    [--nonunique {none,all,fraction,random}] [--secondary-alignments {score,ignore}] [--supplementary-alignments {score,ignore}] [-o SAMOUTS]
@@ -800,7 +807,7 @@ Written by Simon Anders (sanders@fs.tum.de), European Molecular Biology Laborato
 UNSW Sydney. (c) 2010-2021. Released under the terms of the GNU General Public License v3. Please cite the following paper if you use this script: G. Putri et al. Analysing
 high-throughput sequencing data in Python with HTSeq 2.0. Bioinformatics (2022). https://doi.org/10.1093/bioinformatics/btac166. Part of the 'HTSeq' framework, version
 2.0.5.
-
+```
 </details>
 
 # TODO
