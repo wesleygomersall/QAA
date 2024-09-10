@@ -1,4 +1,3 @@
-# FastQC 
 
 ## 2024-08-22
 
@@ -816,7 +815,7 @@ high-throughput sequencing data in Python with HTSeq 2.0. Bioinformatics (2022).
 
 # TODO
 
-Link slurm script [slurm-16101294.out](./slurm-16101294.out)
+Link slurm script [slurm-16106543.out](./slurm-16106543.out)
 
 Determine and support whether or not the data are from strand-specific RNA-Seq libraries. Include commands and scripts used. Briefly describe evidence with quantitative statements (e.g. "I propose that these data are/are not strand-specific, because X% of the reads are y, as opposed to z."). Remember ICA4.
 
