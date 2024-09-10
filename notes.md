@@ -690,16 +690,29 @@ zstd                      1.5.6                ha6fb4c9_0    conda-forge
 ```
 </details> 
 
+```
+mkdir /projects/bgmp/wesg/bioinfo/Bi623/QAA/Mus_musculus.GRCm39.dna_ens112_STAR2.7.10b # dir for STAR database
+mkdir /projects/bgmp/wesg/bioinfo/Bi623/QAA/mmu
+
+# See gene models from PS8. Necessary to perform splice-aware alignment. 
+wget https://ftp.ensembl.org/pub/release-112/gtf/mus_musculus/Mus_musculus.GRCm39.112.gtf.gz
+pigz -d Mus_musculus.GRCm39.112.gtf.gz
+
+cd /projects/bgmp/wesg/bioinfo/Bi623/QAA/mmu
+# Download mouse genome fasta files from Ensemble release 112. 
+wget https://ftp.ensembl.org/pub/release-112/fasta/mus_musculus/dna/Mus_musculus.GRCm39.dna.primary_assembly.fa.gz # 769.1MB
+pigz -d Mus_musculus.GRCm39.dna.primary_assembly.fa.gz
+```
+
+Create alignment slurm script [staralign.sh](./staralign.sh) which will do the following:
+- Generate an alignment database from ensembl files. Align the reads to the mouse genomic database using a splice-aware aligner. Use the settings specified in PS8 from Bi621. 
+
 # TODO
 
-Download mouse genome fasta files from Ensemble release 112. Generate an alignment database from them. Align the reads to the mouse genomic database using a splice-aware aligner. Use the settings specified in PS9 from Bi 621. 
-
-See gene models from PS8. Necessary to perform splice-aware alignment. 
-
-Using script from PS8, report number of mapped and unmapped reads from each of the 2 sam files generated at this point.
+- Using script originally made for PS8 [countmappedSAM.py](./countmappedSAM.py), report number of mapped and unmapped reads from each of the 2 sam files generated at this point.
 Ensure the script is looking at the bitwise flag to determine primary or secondary mapping (update or fix it if necessary) 
 
-Use `htseq-count` to count reads that map to features. Run this twice. Once with `--stranded=yes` and again with `--stranded=reverse`. Use default parameters otherwise.
+- Use `htseq-count` to count reads that map to features. Run this twice. Once with `--stranded=yes` and again with `--stranded=reverse`. Use default parameters otherwise.
 
 Determine and support whether or not the data are from strand-specific RNA-Seq libraries. Include commands and scripts used. Briefly describe evidence with quantitative statements (e.g. "I propose that these data are/are not strand-specific, because X% of the reads are y, as opposed to z."). Remember ICA4.
 
