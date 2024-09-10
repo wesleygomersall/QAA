@@ -38,11 +38,11 @@ S2_READ2=/projects/bgmp/wesg/bioinfo/Bi623/QAA/32_4G_both_S23_L008.R2.cut.trim.f
 	--genomeDir Mus_musculus.GRCm39.dna_ens112_STAR2.7.10b \
 	--outFileNamePrefix ./mmu/32_
 
-/usr/bin/time -v htseq-count --stranded=yes -c htseqout/27_str_count mmu/27_Aligned.out.sam Mus_musculus.GRCm39.112.gtf
-/usr/bin/time -v htseq-count --stranded=reverse -c htseqout/27_rstr_count mmu/27_Aligned.out.sam Mus_musculus.GRCm39.112.gtf
+/usr/bin/time -v htseq-count --stranded=yes -q mmu/27_Aligned.out.sam Mus_musculus.GRCm39.112.gtf > htseqout/27_str_count.txt 
+/usr/bin/time -v htseq-count --stranded=reverse -q mmu/27_Aligned.out.sam Mus_musculus.GRCm39.112.gtf > htseqout/27_rstr_count.txt 
 
-/usr/bin/time -v htseq-count --stranded=yes -c htseqout/32_str_count mmu/32_Aligned.out.sam Mus_musculus.GRCm39.112.gtf
-/usr/bin/time -v htseq-count --stranded=reverse -c htseqout/32_rstr_count mmu/32_Aligned.out.sam Mus_musculus.GRCm39.112.gtf
+/usr/bin/time -v htseq-count --stranded=yes -q mmu/32_Aligned.out.sam Mus_musculus.GRCm39.112.gtf > htseqout/32_str_count.txt 
+/usr/bin/time -v htseq-count --stranded=reverse -q mmu/32_Aligned.out.sam Mus_musculus.GRCm39.112.gtf > htseqout/32_rstr_count.txt 
 
 conda deactivate
 conda activate bgmp_py312 

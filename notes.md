@@ -446,24 +446,27 @@ Paired-end options:
 </details> 
 
 <details>   
+
 <summary> `trimmomatic --help` </summary> 
+
 <br> 
+
 ```
+
 Usage:
        PE [-version] [-threads <threads>] [-phred33|-phred64] [-trimlog <trimLogFile>] [-summary <statsSummaryFile>] [-quiet] [-validatePairs] [-basein <inputBase> | <inputFile1> <inputFile2>] [-baseout <outputBase> | <outputFile1P> <outputFile1U> <outputFile2P> <outputFile2U>] <trimmer1>...
    or:
        SE [-version] [-threads <threads>] [-phred33|-phred64] [-trimlog <trimLogFile>] [-summary <statsSummaryFile>] [-quiet] <inputFile> <outputFile> <trimmer1>...
    or:
        -version
+
 ```
+
 </details>   
 
 In script [cutntrim.sh](cutntrim.sh) these samples are adapter trimmed and then quality trimmed. I create a custom plotting script [pairedreadlengthdist.py](pairedreadlengthdist.py). Afterwards make fastqc outputs to compare to the raw reads. 
 
 Using `cutadapt` trim adapter sequences from these files. Use default settings. What proportion of reads (both R1 and R2) were trimmed?
-
-# TODO
-### Use unix commands to search for the adapter sequences in the data sets and confirm the expected sequence orientations. Report commands used for this and the reasoning behind them and how the adapter sequences are confirmed. 
 
 (Adapters are 33 bases long)
 Use `trimmomatic` to quality trim reads. Specify the following, **in this order**:
@@ -808,6 +811,7 @@ UNSW Sydney. (c) 2010-2021. Released under the terms of the GNU General Public L
 high-throughput sequencing data in Python with HTSeq 2.0. Bioinformatics (2022). https://doi.org/10.1093/bioinformatics/btac166. Part of the 'HTSeq' framework, version
 2.0.5.
 ```
+
 </details>
 
 # TODO
