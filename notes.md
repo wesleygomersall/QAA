@@ -801,11 +801,11 @@ UNSW Sydney. (c) 2010-2021. Released under the terms of the GNU General Public L
 high-throughput sequencing data in Python with HTSeq 2.0. Bioinformatics (2022). https://doi.org/10.1093/bioinformatics/btac166. Part of the 'HTSeq' framework, version
 2.0.5.
 
-</details
+</details>
 
 # TODO
 
-Link slurm script [slurm-1609.out](./slurm-1609.out)
+Link slurm script [slurm-16101294.out](./slurm-16101294.out)
 
 Determine and support whether or not the data are from strand-specific RNA-Seq libraries. Include commands and scripts used. Briefly describe evidence with quantitative statements (e.g. "I propose that these data are/are not strand-specific, because X% of the reads are y, as opposed to z."). Remember ICA4.
 
