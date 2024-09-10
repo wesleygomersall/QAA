@@ -500,9 +500,6 @@ trimmomatic PE cut_27_4C_mbnl_S19_L008_R1_001.fastq cut_27_4C_mbnl_S19_L008_R1_0
 
 There are probably going to be shorter R2 reads because overall quality is worse for R2 reads. 
 
-# TODO
-Link these plots!
-
 ```
 # I should have stuck this in the slurm script
 cd fqcout_cutntrim
