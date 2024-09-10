@@ -500,6 +500,51 @@ trimmomatic PE cut_27_4C_mbnl_S19_L008_R1_001.fastq cut_27_4C_mbnl_S19_L008_R1_0
 
 There are probably going to be shorter R2 reads because overall quality is worse for R2 reads. 
 
+# TODO
+Link these plots!
+
+```
+# I should have stuck this in the slurm script
+cd fqcout_cutntrim
+unzip 27_4C_mbnl_S19_L008.R1.cut.trim_fastqc.zip
+unzip 27_4C_mbnl_S19_L008.R2.cut.trim_fastqc.zip
+unzip 32_4G_both_S23_L008.R1.cut.trim_fastqc.zip
+unzip 32_4G_both_S23_L008.R2.cut.trim_fastqc.zip
+
+mkdir report
+cp 27_4C_mbnl_S19_L008.R1.cut.trim_fastqc/Images/per_base_quality.png report/27_R1_per_base_quality.png
+cp 27_4C_mbnl_S19_L008.R2.cut.trim_fastqc/Images/per_base_quality.png report/27_R2_per_base_quality.png
+cp 32_4G_both_S23_L008.R1.cut.trim_fastqc/Images/per_base_quality.png report/32_R1_per_base_quality.png
+cp 32_4G_both_S23_L008.R2.cut.trim_fastqc/Images/per_base_quality.png report/32_R2_per_base_quality.png
+cp 27_4C_mbnl_S19_L008.R1.cut.trim_fastqc/Images/per_base_n_content.png report/27_R1_per_base_n_content.png
+cp 27_4C_mbnl_S19_L008.R2.cut.trim_fastqc/Images/per_base_n_content.png report/27_R2_per_base_n_content.png
+cp 32_4G_both_S23_L008.R1.cut.trim_fastqc/Images/per_base_n_content.png report/32_R1_per_base_n_content.png
+cp 32_4G_both_S23_L008.R2.cut.trim_fastqc/Images/per_base_n_content.png report/32_R2_per_base_n_content.png
+rm -r 27_4C_mbnl_S19_L008.R1.cut.trim_fastqc
+rm -r 27_4C_mbnl_S19_L008.R2.cut.trim_fastqc
+rm -r 32_4G_both_S23_L008.R1.cut.trim_fastqc
+rm -r 32_4G_both_S23_L008.R2.cut.trim_fastqc
+cd ..
+```
+
+### FastQC outputs from adapter cut and quality-trimmed files
+
+### 27_4C_mbnl_S19_L008_R1
+![](./fqcout_cutntrim/report/27_R1_per_base_quality.png)
+![](./fqcout_cutntrim/report/27_R1_per_base_n_content.png)
+
+### 27_4C_mbnl_S19_L008_R2
+![](./fqcout_cutntrim/report/27_R2_per_base_quality.png)
+![](./fqcout_cutntrim/report/27_R2_per_base_n_content.png)
+
+### 32_4G_both_S23_L008_R1
+![](./fqcout_cutntrim/report/32_R1_per_base_quality.png)
+![](./fqcout_cutntrim/report/32_R1_per_base_n_content.png)
+
+### 32_4G_both_S23_L008_R2
+![](./fqcout_cutntrim/report/32_R2_per_base_quality.png)
+![](./fqcout_cutntrim/report/32_R2_per_base_n_content.png)
+
 # Part 3
 
 In QAA environment install: 
@@ -813,17 +858,32 @@ high-throughput sequencing data in Python with HTSeq 2.0. Bioinformatics (2022).
 
 </details>
 
-# TODO
+[slurm-16106543.out](./slurm-16106543.out)
 
-Link slurm script [slurm-16106543.out](./slurm-16106543.out)
+See folder `htseqout` for the alignment data for each of the samples, for either strand. 
 
-Determine and support whether or not the data are from strand-specific RNA-Seq libraries. Include commands and scripts used. Briefly describe evidence with quantitative statements (e.g. "I propose that these data are/are not strand-specific, because X% of the reads are y, as opposed to z."). Remember ICA4.
+To determine whether the data is strand specific, use the following commands (see ICA4 from Bi623) on this htseq output. 
+This returns the percent of reads which were mapped in each of these files. 
 
-Review the [metadata](./metadata) available to you and see if this information leads to any additional insight of your analysis.
+```bash
+$ awk '{tot+=$2} $1~"ENSMUSG" {sum += $2} END{print 100*(sum/tot)"%"}' htseqout/27_str_count.txt
+3.91303%
+$ awk '{tot+=$2} $1~"ENSMUSG" {sum += $2} END{print 100*(sum/tot)"%"}' htseqout/27_rstr_count.txt
+82.701%
+
+$ awk '{tot+=$2} $1~"ENSMUSG" {sum += $2} END{print 100*(sum/tot)"%"}' htseqout/32_str_count.txt
+3.82643%
+$ awk '{tot+=$2} $1~"ENSMUSG" {sum += $2} END{print 100*(sum/tot)"%"}' htseqout/32_rstr_count.txt
+86.4336%
+```
+
+The data are from strand specific RNA-Seq libraries. The vast majority of reads (82.701%, 86.4336%) were mapped using `--stranded=reverse`, while only 3.91303%, 3.82643% mapped using `--stranded=yes` for samples 27_4C_mbnl_S19_L008 and 32_4G_both_S23_L008 respectively. I used commands from ICA4 in Bi621.
+
+# To turn in
 
 ## Upload:
 - [ ] lab notebook,
-- [ ] Talapas batch script/code, 
+- [x] Talapas batch script/code, 
 - [ ] FastQC plots, 
 - [ ] counts files generated from htseq-count (in a folder would be nice),
 - [ ] pdf report (see below), 
