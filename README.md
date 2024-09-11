@@ -1,123 +1,173 @@
-# RNA-seq Quality Assessment Assignment - Bi 623 (Summer 2024)
+# FastQC QAA 
 
-Be sure to upload all relevant materials by the deadline and **double check** to be sure that your offline repository is up-to-date with your online repository. Answers to questions should be included in your final, high-level, report as a `pdf`. This pdf should be generated using Rmarkdown and submitted to Canvas as well as GitHub. Be sure to keep a well-organized, detailed lab notebook!
+The objectives of this assignment are to:
+1. Evaluate quality of RNA-Seq data using FastQC before and after removing adapters and trimming low quality reads. 
+2. Compare custom python script to the output of FastQC. 
+3. Connect concepts and tools developed in previous assignments. 
+4. Determine and justify stranded-ness of the data. 
 
-## Objectives
-The objectives of this assignment are to use existing tools for quality assessment and adaptor trimming, compare the quality assessments to those from your own software, and to demonstrate your ability to summarize other important information about this RNA-Seq data set in a high-level report. That is, you should create a cohesive, [well written](https://canvas.uoregon.edu/courses/244873/modules/667769) report for your "PI" about what you've learned about/from your data.
+Data files assigned to process (R1 and R2):
+- 27_4C_mbnl_S19_L008	
+- 32_4G_both_S23_L008
 
-### Data: 
-Each of you will be working with 2 of the demultiplexed file pairs. For all steps below, process the two libraries separately. Library assignments are here: ```/projects/bgmp/shared/Bi623/QAA_data_assignments.txt```
+The plots I generated are basically the same in terms of what information they displey, however the FastQc plots include error bars, which might be variance or interquartile range. 
 
-The demultiplexed, gzipped `.fastq` files are here: ```/projects/bgmp/shared/2017_sequencing/demultiplexed/```
+The read 1 files' quality is much better than the read 2s' quality score but that is due to the reads being later in the sequencing run.  
 
-> [!WARNING]
-> Do not move, copy, or unzip these data!
+Overall, this data seems to be of good quality, none of the error bars of fastqc output seem to have dipped into the red regions so that must at least be sufficient quality to do something with.
+
+### FastQC outputs from raw files 
+
+```{r echo=FALSE, fig.width=8, fig.height=7.5, fig.cap="Fig. 1: Quality Report for 27_4C_mbnl_S19_L008"}
+library(png)
+library(gridExtra)
+library(grid)
+library(ggplot2)
+library(lattice)
+
+rawS27R1_fqcQual <- readPNG("./fqcout_raw/report/27_R1_per_base_quality.png")
+rawS27R2_fqcQual <- readPNG("./fqcout_raw/report/27_R2_per_base_quality.png")
+
+rawS27R1_fqcN <- readPNG("./fqcout_raw/report/27_R1_per_base_n_content.png")
+rawS27R2_fqcN <- readPNG("./fqcout_raw/report/27_R2_per_base_n_content.png")
+
+rawS27R1_cust <- readPNG("./fqcout_raw/report/27_R1_myplot.png")
+rawS27R2_cust <- readPNG("./fqcout_raw/report/27_R2_myplot.png")
+
+grid.arrange(rasterGrob(rawS27R1_cust), rasterGrob(rawS27R2_cust), rasterGrob(rawS27R1_fqcQual), rasterGrob(rawS27R2_fqcQual), rasterGrob(rawS27R1_fqcN), rasterGrob(rawS27R2_fqcN), nrow = 3, ncol = 2)
+grid.text("A", x=unit(0.018, "npc"), y=unit(0.955, "npc"), gp=gpar(fontsize=10, col="grey25"))
+grid.text("B", x=unit(0.018, "npc"), y=unit(0.555, "npc"), gp=gpar(fontsize=10, col="grey25"))
+grid.text("C", x=unit(0.018, "npc"), y=unit(0.255, "npc"), gp=gpar(fontsize=10, col="grey25"))
 ```
-______                    _                                                               
-|  _  \                  | |                                                              
-| | | |___    _ __   ___ | |_   _ __ ___   _____   _____      ___ ___  _ __  _   _        
-| | | / _ \  | '_ \ / _ \| __| | '_ ` _ \ / _ \ \ / / _ \    / __/ _ \| '_ \| | | |       
-| |/ / (_) | | | | | (_) | |_  | | | | | | (_) \ V /  __/_  | (_| (_) | |_) | |_| |_      
-|___/ \___/  |_| |_|\___/ \__| |_| |_| |_|\___/ \_/ \___( )  \___\___/| .__/ \__, ( )     
-                                                        |/            | |     __/ |/      
-                                                                      |_|    |___/        
-                              _         _   _                          _       _        _ 
-                             (_)       | | | |                        | |     | |      | |
-  ___  _ __   _   _ _ __  _____ _ __   | |_| |__   ___  ___  ___    __| | __ _| |_ __ _| |
- / _ \| '__| | | | | '_ \|_  / | '_ \  | __| '_ \ / _ \/ __|/ _ \  / _` |/ _` | __/ _` | |
-| (_) | |    | |_| | | | |/ /| | |_) | | |_| | | |  __/\__ \  __/ | (_| | (_| | || (_| |_|
- \___/|_|     \__,_|_| |_/___|_| .__/   \__|_| |_|\___||___/\___|  \__,_|\__,_|\__\__,_(_)
-                               | |                                                        
-                               |_|                                                        
+```{r echo=FALSE, fig.width=8, fig.height=7.5, fig.cap="Fig. 2: Quality Report for 32_4G_both_S23_L008"}
+library(png)
+library(gridExtra)
+library(grid)
+library(ggplot2)
+library(lattice)
+
+rawS32R1_fqcQual <- readPNG("./fqcout_raw/report/32_R1_per_base_quality.png")
+rawS32R2_fqcQual <- readPNG("./fqcout_raw/report/32_R2_per_base_quality.png")
+
+rawS32R1_fqcN <- readPNG("./fqcout_raw/report/32_R1_per_base_n_content.png")
+rawS32R2_fqcN <- readPNG("./fqcout_raw/report/32_R2_per_base_n_content.png")
+
+rawS32R1_cust <- readPNG("./fqcout_raw/report/32_R1_myplot.png")
+rawS32R2_cust <- readPNG("./fqcout_raw/report/32_R2_myplot.png")
+
+grid.arrange(rasterGrob(rawS32R1_cust), rasterGrob(rawS32R2_cust), rasterGrob(rawS32R1_fqcQual), rasterGrob(rawS32R2_fqcQual), rasterGrob(rawS32R1_fqcN), rasterGrob(rawS32R2_fqcN), nrow = 3, ncol = 2)
+grid.text("A", x=unit(0.018, "npc"), y=unit(0.955, "npc"), gp=gpar(fontsize=10, col="grey25"))
+grid.text("B", x=unit(0.018, "npc"), y=unit(0.555, "npc"), gp=gpar(fontsize=10, col="grey25"))
+grid.text("C", x=unit(0.018, "npc"), y=unit(0.255, "npc"), gp=gpar(fontsize=10, col="grey25"))
+
 ```
-> [!WARNING]
-> Do not move, copy, or unzip these data!
+Figures 1 and 2 contain FastQC quality data for both samples 27_4C_mbnl_S19_L008 and 32_4G_both_S23_L008 respectively. 
+Row A contains plots generated by custom plotting script `mean_qual.py`. Row B is the same data, produced by FastQC. See table below for further differences between these plots. 
+Row C contains the per-base N content for each read file. The columns in these figures correspond to R1 and R2 reads. 
 
-# Part 1 – Read quality score distributions
+Table of the times and memory for each of these commands as timed with `/usr/bin/time -v`
 
-1. Create a new conda environment called `QAA` and install `FastQC`. Google around if you need a refresher on how to create conda environments. Recommend doing this in an interactive session, not the login node! Record details of how you created this environment in your lab notebook! Make sure you check your installation with:
-   - `fastqc --version` (should be 0.12.1)  
+| File | FastQC Time | FastQC Memory (kbytes)| mean_qual.py Time | mean_qual.py Memory (kbytes) |
+| :---: 	| :---: 	| :---: 	| :---: | :---: |
+| 27_4C_mbnl_S19_L008_R1 | 0:31.36 | 370344 | 1:36.44 | 65688 |
+| 27_4C_mbnl_S19_L008_R2 | 0:30.18 | 367432 | 1:29.58 | 65612 |
+| 32_4G_both_S23_L008_R1 | 0:46.33 | 345816 | 2:26.40 | 63568 |
+| 32_4G_both_S23_L008_R2 | 0:46.21 | 349428 | 2:26.72 | 65540 |
 
-2. Using `FastQC` via the command line on Talapas, produce plots of the per-base quality score distributions for R1 and R2 reads. Also, produce plots of the per-base N content, and comment on whether or not they are consistent with the quality score plots.
+<!-- Colons in the --- row specify column alignment -->
 
-3. Run your quality score plotting script from your Demultiplexing assignment in Bi622. (Make sure you're using the "running sum" strategy!!) Describe how the `FastQC` quality score distribution plots compare to your own. If different, propose an explanation. Also, does the runtime differ? Mem/CPU usage? If so, why?
+FastQC is much faster (it is calculating so much more) than my python script. The graphs are similar however, with mine only missing error bars (IQR).
 
-4. Comment on the overall data quality of your two libraries. Go beyond per-base qscore distributions. Make and justify a recommendation on whether these data are of high enough quality to use for further analysis.
+---
 
-# Part 2 – Adaptor trimming comparison
+## Trimming
 
-5.  In your QAA environment, install `cutadapt` and `Trimmomatic`. Check your installations with:
-    - `cutadapt --version` (should be 4.9)
-    - `trimmomatic -version` (should be 0.39)
+After these first plots, data are adapter trimmed using `cutadapt` and then quality trimmed with `trimmomatic`. 
+Using another custom pyplot script, plot the distributions of read lengths also. 
 
-6. Using `cutadapt`, properly trim adapter sequences from your assigned files. Be sure to read how to use `cutadapt`. Use default settings. What proportion of reads (both R1 and R2) were trimmed?
+Cutadapt information: 
+- Sample 27_4C_mbnl_S19_L008
+  - Total read pairs processed:          7,226,430
+    - Read 1 with adapter:                 751,117 (10.4%)
+    - Read 2 with adapter:                 803,568 (11.1%)
+  - Pairs written (passing filters):     7,226,430 (100.0%)
+- Sample 32_4G_both_S23_L008
+  - Total read pairs processed:         11,820,174
+    - Read 1 with adapter:                 631,720 (5.3%)
+    - Read 2 with adapter:                 725,571 (6.1%)
+  - Pairs written (passing filters):    11,820,174 (100.0%)
 
-    <details>
-    <summary>Try to determine what the adapters are on your own. If you cannot (or if you do, and want to confirm), click here to see the actual adapter sequences used.</summary>
-  
-    R1: `AGATCGGAAGAGCACACGTCTGAACTCCAGTCA`
-    
-    R2: `AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGT`
-    </details>
+### FastQC outputs from trimmed files 
 
-    - *Sanity check*: Use your Unix skills to search for the adapter sequences in your datasets and confirm the expected sequence orientations. Report the commands you used, the reasoning behind them, and how you confirmed the adapter sequences.
+```{r echo=FALSE, fig.width=8, fig.height=5, fig.cap="Fig. 3: Per Base Quality Score From FastQC"}
+library(png)
+library(gridExtra)
+library(grid)
+library(ggplot2)
+library(lattice)
 
-7. Use `Trimmomatic` to quality trim your reads. Specify the following, **in this order**:
-    - LEADING: quality of 3
-    - TRAILING: quality of 3
-    - SLIDING WINDOW: window size of 5 and required quality of 15
-    - MINLENGTH: 35 bases
+S27R1 <- readPNG("./fqcout_cutntrim/report/27_R1_per_base_quality.png")
+rawS27R1 <- readPNG("./fqcout_raw/report/27_R1_per_base_quality.png")
+S27R2 <- readPNG("./fqcout_cutntrim/report/27_R2_per_base_quality.png")
+rawS27R2 <- readPNG("./fqcout_raw/report/27_R2_per_base_quality.png")
 
-    Be sure to output compressed files and clear out any intermediate files.
+grid.arrange(rasterGrob(rawS27R1), rasterGrob(rawS27R2), rasterGrob(S27R1), rasterGrob(S27R2), nrow = 2, ncol = 2)
+grid.text("A", x=unit(0.018, "npc"), y=unit(0.955, "npc"), gp=gpar(fontsize=10, col="grey25"))
+grid.text("", x=unit(0.518, "npc"), y=unit(0.955, "npc"), gp=gpar(fontsize=10, col="grey25"))
+grid.text("B", x=unit(0.018, "npc"), y=unit(0.455, "npc"), gp=gpar(fontsize=10, col="grey25"))
+grid.text("", x=unit(0.518, "npc"), y=unit(0.455, "npc"), gp=gpar(fontsize=10, col="grey25"))
+```
 
-8. Plot the trimmed read length distributions for both R1 and R2 reads (on the same plot - yes, you will have to use Python or R to plot this. See ICA4 from Bi621). You can produce 2 different plots for your 2 different RNA-seq samples. There are a number of ways you could possibly do this. One useful thing your plot should show, for example, is whether R1s are trimmed more extensively than R2s, or vice versa. Comment on whether you expect R1s and R2s to be adapter-trimmed at different rates and why.
+```{r echo=FALSE, fig.width=8, fig.height=5, fig.cap="Fig. 4: Per Base Quality Score From FastQC"}
+library(png)
+library(gridExtra)
+library(grid)
+library(ggplot2)
+library(lattice)
 
-9. CHALLENGE - Run `FastQC` on your trimmed data. Comment on differences you observe between the trimmed and untrimmed data. Include any figures needed to support your conclusions.
+S32R1 <- readPNG("./fqcout_cutntrim/report/32_R1_per_base_quality.png")
+rawS32R1 <- readPNG("./fqcout_raw/report/32_R1_per_base_quality.png")
+S32R2 <- readPNG("./fqcout_cutntrim/report/32_R2_per_base_quality.png")
+rawS32R2 <- readPNG("./fqcout_raw/report/32_R2_per_base_quality.png")
 
-# Part 3 – Alignment and strand-specificity
-10. Install sofware (record details in lab notebook!!!). In your QAA environment, use conda to install:
-    - star
-    - numpy
-    - matplotlib
-    - htseq
+grid.arrange(rasterGrob(rawS32R1), rasterGrob(rawS32R2), rasterGrob(S32R1), rasterGrob(S32R2), nrow = 2, ncol = 2)
+grid.text("A", x=unit(0.018, "npc"), y=unit(0.955, "npc"), gp=gpar(fontsize=10, col="grey25"))
+grid.text("", x=unit(0.518, "npc"), y=unit(0.955, "npc"), gp=gpar(fontsize=10, col="grey25"))
+grid.text("B", x=unit(0.018, "npc"), y=unit(0.455, "npc"), gp=gpar(fontsize=10, col="grey25"))
+grid.text("", x=unit(0.518, "npc"), y=unit(0.455, "npc"), gp=gpar(fontsize=10, col="grey25"))
+```
 
-11. Find publicly available mouse genome fasta files (Ensemble release 112) and generate an alignment database from them. Align the reads to your mouse genomic database using a splice-aware aligner. Use the settings specified in PS8 from Bi621.
+Figures 3 and 4 contain FastQC output of mean quality score by base position for samples 27_4C_mbnl_S19_L008 and 32_4G_both_S23_L008 respectively. 
+Row A shows the plots for R1 and R1 (left and right respectively) before trimming (raw reads). Row B contains plots of trimmed data.
 
-  > [!IMPORTANT]
-  > You will need to use gene models to perform splice-aware alignment, see PS8 from Bi621.
-    
-12. Using your script from PS8 in Bi621, report the number of mapped and unmapped reads from each of your 2 sam files. Make sure that your script is looking at the bitwise flag to determine if reads are primary or secondary mapping (update/fix your script if necessary).
+### Trimmed files length distributions 
 
-13. Count reads that map to features using `htseq-count`. You should run htseq-count twice: once with `--stranded=yes` and again with `--stranded=reverse`. Use default parameters otherwise.
+```{r echo=FALSE, fig.width=8, fig.height=2.5, fig.cap="Fig. 5: Read Length Distributions"}
+library(png)
+library(gridExtra)
+library(grid)
+library(ggplot2)
+library(lattice)
 
-14. Demonstrate convincingly whether or not the data are from "strand-specific" RNA-Seq libraries. Include any comands/scripts used. Briefly describe your evidence, using quantitative statements (e.g. "I propose that these data are/are not strand-specific, because X% of the reads are y, as opposed to z.").
+S27 <- readPNG("./27_4C_mbnl_S19_L008.Rlendist.png")
+S32 <- readPNG("./32_4G_both_S23_L008.Rlendist.png")
 
-  > [!TIP]
-  > Recall ICA4 from Bi621.
+grid.arrange(rasterGrob(S27), rasterGrob(S27), nrow = 1, ncol = 2)
+grid.text("A", x=unit(0.018, "npc"), y=unit(0.955, "npc"), gp=gpar(fontsize=10, col="grey25"))
+grid.text("B", x=unit(0.518, "npc"), y=unit(0.955, "npc"), gp=gpar(fontsize=10, col="grey25"))
+```
 
-# Challenge (optional!)
+In Figure 5, graph A corresponds to sample 27_4C_mbnl_S19_L008.Rlendist.png, graph B corresponds to sample 32_4G_both_S23_L008.Rlendist.png. These reads have been adapter cut and quality trimmed. 
 
-Review the [metadata](./metadata) available to you and see if this information leads to any additional insight of your analysis.
+---
 
-# To turn in your work for this assignment
+Create an alignment database for *M. musculus* using STAR RNA-Seq aligner. Align both samples to this database. Using `htseq-count`, reads which mapped to features were counted for both `--stranded=yes` and `--stranded=reverse`
 
-## Upload your:
-- [ ] lab notebook,
-- [ ] Talapas batch script/code, 
-- [ ] FastQC plots, 
-- [ ] counts files generated from htseq-count (in a folder would be nice),
-- [ ] pdf report (see below), 
-- [ ] and any additional plots, code, or code output
+Results of STAR alignment: 
 
-to GitHub.
-    
-## You should create a pdf file (using Rmarkdown) with a high-level report including:
-- [ ] all requested plots
-- [ ] answers to questions
-- [ ] mapped/unmapped read counts from PS8 script (in a nicely formatted table)
-    
-The three parts of the assignment should be clearly labeled. Be sure to title and write a descriptive figure caption for each image/graph/table you present. 
-> [!TIP]
-> Think about figure captions you've read and discussed in Journal Club. Find some good examples to model your captions on.
+| Sample | Reads Mapped | Reads Not Mapped | 
+| :---: |:---: |:---: |
+| 27_4C_mbnl_S19_L008 | 13320032 | 433878 | 
+| 32_4G_both_S23_L008 | 22404331 | 533601 |
 
-The file should be named `QAA_report.pdf`, and it should be a the top level of your repo AND submitted to Canvas.
+The data are from strand specific RNA-Seq libraries. The vast majority of reads (82.701%, 86.4336%) were mapped using `--stranded=reverse`, while only 3.91303%, 3.82643% mapped using `--stranded=yes` for samples 27_4C_mbnl_S19_L008 and 32_4G_both_S23_L008 respectively. I used commands from ICA4 in Bi621.
