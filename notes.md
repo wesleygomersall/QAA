@@ -524,6 +524,22 @@ rm -r 32_4G_both_S23_L008.R2.cut.trim_fastqc
 cd ..
 ```
 
+[slurm-16043986.out](./slurm-16043986.out)
+
+```
+# these are from cutadapt:
+# 27_4C_mbnl_S19_L008
+Total read pairs processed:          7,226,430
+  Read 1 with adapter:                 751,117 (10.4%)
+  Read 2 with adapter:                 803,568 (11.1%)
+Pairs written (passing filters):     7,226,430 (100.0%)
+# 32_4G_both_S23_L008
+Total read pairs processed:         11,820,174
+  Read 1 with adapter:                 631,720 (5.3%)
+  Read 2 with adapter:                 725,571 (6.1%)
+Pairs written (passing filters):    11,820,174 (100.0%)
+```
+
 ### FastQC outputs from adapter cut and quality-trimmed files
 
 ### 27_4C_mbnl_S19_L008_R1
@@ -541,6 +557,14 @@ cd ..
 ### 32_4G_both_S23_L008_R2
 ![](./fqcout_cutntrim/report/32_R2_per_base_quality.png)
 ![](./fqcout_cutntrim/report/32_R2_per_base_n_content.png)
+ 
+#### 27_4C_mbnl_S19_L008
+
+![](./27_4C_mbnl_S19_L008.Rlendist.png)
+
+#### 32_4G_both_S23_L008
+
+![](./32_4G_both_S23_L008.Rlendist.png)
 
 # Part 3
 
@@ -856,6 +880,15 @@ high-throughput sequencing data in Python with HTSeq 2.0. Bioinformatics (2022).
 </details>
 
 [slurm-16106543.out](./slurm-16106543.out)
+
+Pasted from above slurm output, this is the output from [countmappedSAM.py)[./countmappedSAM.py]:
+```
+13320032 reads in mmu/27_Aligned.out.sam are mapped.
+433878 reads in mmu/27_Aligned.out.sam are unmapped.
+
+22404331 reads in mmu/32_Aligned.out.sam are mapped.
+533601 reads in mmu/32_Aligned.out.sam are unmapped.
+```
 
 See folder `htseqout` for the alignment data for each of the samples, for either strand. 
 
