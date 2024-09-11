@@ -220,9 +220,9 @@ Overall, this data seems to be of good quality, none of the error bars of fastqc
 ![](./fqcout_raw/report/32_R2_per_base_n_content.png)
 
 Table of the times and memory for each of these commands as timed with `/usr/bin/time -v`
-| Program | FastQC |FastQC| Custom | Custom | 
-| File | Time |  Memory (kbytes)| Time | Memory (kbytes) |
-| --- 	| --- 	| --- 	| 
+
+| File | FastQC Time | FastQC Memory (kbytes)| custom Time | custom Memory (kbytes) |
+| --- 	| --- 	| --- 	|  --- 	| --- 	| 
 | 27_4C_mbnl_S19_L008_R1 | 0:31.36 | 370344 | 1:36.44 | 65688 |
 | 27_4C_mbnl_S19_L008_R2 | 0:30.18 | 367432 | 1:29.58 | 65612 |
 | 32_4G_both_S23_L008_R1 | 0:46.33 | 345816 | 2:26.40 | 63568 |
